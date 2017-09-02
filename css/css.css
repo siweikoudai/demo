@@ -1,0 +1,491 @@
+html, body{height:100%;width:100%;background:url(../img/bg-guisado.jpg);font-size:79.06%;font-family:'DINpro-l'}
+*{box-sizing:border-box}
+a{color:inherit;transition:all ease-out 0.3s;-webkit-transition:all ease-out 0.3s}
+/*LOADER*/
+#loader{width:100%;height:100%;position:fixed;background:url(../img/bg-guisado.jpg) #252525;z-index:9999;left:0;top:0;}
+#loader .num{position:absolute;width:100px;height:30px;color:#cca36e;opacity:0.5;font-size:3.5em;font-family:'DINpro-b';overflow:hidden;letter-spacing:0.1em;text-align:center;top:50%;margin-top:-15px;left:0px;transition:all ease-out 0.6s;-webkit-transition:all ease-out 0.6s;transform:rotate(-90deg);-webkit-transform:rotate(-90deg);}
+#loader i{width:2px;height:100%;position:absolute;top:0;left:64px;background:#676767;}
+#loader i .per{width:100%;height:0;bottom:0;left:0;background:#ba9565;position:absolute;transition:all ease-out 0.3s;-webkit-transition:all ease-out 0.3s;}
+
+section{position:relative;width:100%;min-height:100%}
+section em{position:absolute;bottom:0}
+header{height:100%;position:fixed;top:0;left:0;z-index:99;transition:background ease-in 0.3, width ease 0.1s 0.3s;-webkit-transition:background ease-in 0.3s, width ease 0.1s 0.3s;width:20px}
+header.op{width:100%;background:rgba(0,0,0,0.7);transition:background ease-in 0.3s 0.1s, width ease 0.1s;-webkit-transition:background ease-in 0.3s 0.1s, width ease 0.1s;}
+header .bt-menu{position:absolute;width:54px;height:54px;background:rgba(255,255,255,0.05);border-radius:50px;cursor:pointer;z-index:3;top:20px;left:23px;transition:all ease-out 0.3s;-webkit-transition:all ease-out 0.3s}
+header .bt-menu i{width:20px;height:1px;background:#cca36e;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);transition:all ease-out 0.3s;-webkit-transition:all ease-out 0.3s;}
+header .bt-menu i:first-child{margin-top:-5px;}
+header .bt-menu i:last-child{margin-top:5px;}
+header .bt-menu.open{background:#FFF}
+header .bt-menu.open i{transform:rotate(45deg);-webkit-transform:rotate(45deg);left:33%}
+header .bt-menu.open i:first-child{transform:rotate(135deg);-webkit-transform:rotate(135deg);margin-top:0}
+header .bt-menu.open i:last-child{display:none}
+nav{width:250px;height:100%;position:fixed;background:#a6865d;color:#FFF;left:-250px}
+nav i{width:50px;height:100%;position:absolute;z-index:0;background:#8a6f4d;}
+nav ul{position:relative;z-index:1;transform:translateY(-50%);-webkit-transform:translateY(-50%);top:50%}
+nav li:first-child{margin-top:0;}
+nav li{height:50px;position:relative;padding-left:50px;margin-top:60px}
+nav li a{font-size:1.4em;display:block;line-height:50px;padding-left:3px;opacity:0;font-family:'DINpro-l'}
+nav li span{position:absolute;width:50px;height:25px;color:#000;opacity:0.1;font-size:3.5em;font-family:'DINpro-b';overflow:hidden;letter-spacing:0.1em;text-align:center;top:13px;left:13px;transition:all ease-out 0.3s;-webkit-transition:all ease-out 0.3s;transform:rotate(-90deg);-webkit-transform:rotate(-90deg);opacity:0}
+nav li.view a{opacity:1;padding-left:25px;}
+nav li.view span{opacity:0.1;}
+nav li.active > span{opacity:0.25}
+nav li.active > a{color:#000}
+
+#navScroll{height:calc(100% - 74px);position:fixed;color:#FFF;z-index:98;top:74px}
+#navScroll i{width:50px;height:100%;position:absolute;z-index:0;border-right:1px solid rgba(255,255,255,0.3)}
+#navScroll li{max-height:150px;min-height:50px;position:relative;padding-left:50px;margin-top:15px;height:17%}
+#navScroll li:first-child{margin-top:0;}
+#navScroll li a{padding:20px;left:49px;top:0;font-size:1.4em;display:block;height:100%;padding-left:3px;font-family:'DINpro-l';position:absolute;border-left:1px solid rgba(255,255,255,0.8)}
+#navScroll li a strong{font-weight:normal;position:absolute;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);opacity:0;transition:all ease-out 0.3s;-webkit-transition:all ease-out 0.3s}
+#navScroll li span{position:absolute;width:50px;height:25px;color:#cca36e;opacity:0;font-size:3.5em;font-family:'DINpro-b';overflow:hidden;letter-spacing:0.1em;text-align:center;top:50%;margin-top:-2px;left:13px;transition:all ease-out 0.3s;-webkit-transition:all ease-out 0.3s;transform:rotate(-90deg);-webkit-transform:rotate(-90deg);}
+#navScroll li em{position:absolute;left:49px;top:0px;width:4px;background:#cca36e;opacity:0;z-index:3;max-height:100% !important;height:0;transition:height, opacity ease-out 0.3s;-webkit-transition:height, opacity  ease-out 0.3s;-moz-top:0}
+#navScroll li.active em{opacity:1}
+#navScroll li.active a{padding-left:23px;}
+#navScroll li.active a strong{opacity:1}
+#navScroll li.active span{opacity:0.2}
+
+/*sections*/
+#inicio{overflow:hidden}
+#inicio .wp{width:100%;max-width:970px;position:relative;z-index:3;margin:auto;padding:8% 60px;transition:ease-out 0.5s all;-webkit-transition:ease-out 0.5s all;left:-80px;opacity:0}
+#inicio .logo{width:180px;position:relative;height:125px;left:-50px}
+#inicio .logo span{position:absolute;right:25px;bottom:0;color:#FFF;font-size:0.8em;text-transform:uppercase;letter-spacing:0.2em}
+#inicio .logo svg{fill:#FFF;stroke:#FFF;stroke-width:1px;stroke-dasharray:0, 1087;transition:ease-out 2s all;-webkit-transition:ease-out 2s all;width:100%;}
+#inicio .logo.view svg{stroke-dasharray:1087, 0;}
+#inicio h1{font-size:3.3em;color:#FFF;font-weight:normal;line-height:1.8;margin:85px 0;text-transform:uppercase;letter-spacing:0.4em}
+.bt-ancla{display:inline-block;padding-left:45px;position:relative;line-height:80px;font-size:1.2em;color:rgba(255,255,255,0.2);text-transform:uppercase;letter-spacing:0.2em}
+.bt-ancla img{position:absolute;left:0;top:0;transition:top ease-out 0.3s;-webkit-transition:top ease-out 0.3s;}
+
+#inicio img{position:absolute;z-index:0;transition:ease-out 0.3s all;-webkit-transition:ease-out 0.3s all;}
+#inicio .pimienta-1{top:0;left:40%}
+#inicio .pimienta-2{top:45%;left:70%}
+#inicio .romero{top:80px;left:65%}
+#inicio .destapa{bottom:50px;left:80%}
+#inicio .ajos{bottom:160px;left:50%;transform:translateX(-80%);-webkit-transform:translateX(-80%)}
+
+#inicio .sarten{top:0;left:50%;transform:translateX(-40%);-webkit-transform:translateX(-40%);}
+#inicio .espatula{top:0;left:10%}
+#inicio .vino{bottom:0px;left:50%}
+
+#inicio .vx{opacity:0;}
+#inicio .sarten.vx{-webkit-filter:blur(10px);filter:blur(10px);left:90%;}
+#inicio .vino.vx{-webkit-filter:blur(10px);filter:blur(10px);bottom:-200px}
+#inicio .espatula.vx{top:-300px}
+
+#historia .copy{max-width:700px;padding:150px 70px 0;position:relative;margin:auto;text-align:center;top:200px;transition:ease-out 0.5s all;-webkit-transition:ease-out 0.5s all;}
+#historia .copy p{margin:20px 0;font-size:2em;color:#848383;line-height:1.5;position:relative}
+#historia .copy h2{color:#FFF;font-weight:normal;font-size:3.5em;font-family: 'clicheregular';}
+#historia .copy hr{width:120px;margin:30px auto;border:none;height:1px;background:#cca36e}
+#historia .firma{display:block;margin:auto;width:250px;position:relative;font-size:1.5em;}
+#historia .firma h4{color:#FFF;font-family:'DINpro-b';position:absolute;z-index:1;top:10px;left:0}
+#historia .firma svg{width:100%;stroke:#5a5a5a;stroke-width:1px;stroke-dasharray:0, 1087;transition:ease-in 2.5s all;-webkit-transition:ease-in 2.5s all;width:100%;}
+#historia .firma.view svg{stroke-dasharray:1087, 0;}
+
+#cocina .video{position:relative;z-index:2}
+#video-controls{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);-webkit-transform:translateX(-50%);width:70%;opacity:0.3;transition:opacity ease 0.3s;-webkit-transition:opacity ease 0.3s;}
+#video-controls .barra{width:calc(100% - 90px);height:8px;background:rgba(255, 255, 255, 0.4);position:relative;float:left;margin:10px 0px}
+#video-controls #play-pause, #video-controls #mute{float:left;margin:0 5px;height:27px;width:34px;font-size:0;border:none;outline:none;background:none;padding:0;cursor:pointer;}
+#video-controls #volume-bar, #video-controls #full-screen{display:none;}
+#video-controls #seek-bar{background:#cca36e;position:absolute;height:100%;left:0;top:0;transition:width ease-in 0.3s;}
+
+#cocina .wp{width:970px;padding:0 60px;position:relative;margin:auto;height:100%;z-index:2}
+#cocina .sobrinos{position:relative;padding-bottom:100px;padding-top:1px;overflow:hidden}
+#cocina .sobrinos .wp{margin:285px auto 80px;}
+#cocina .sobrinos .px{position:relative;transition:top ease-out 0.3s;-webkit-transition:top ease-out 0.3s;}
+#cocina .sobrinos h2{font-size:3.3em;color:#FFF;font-weight:normal;line-height:1.8;text-transform:uppercase;letter-spacing:0.4em}
+#cocina .sobrinos img{position:absolute;z-index:0;transition:top ease-out 0.3s;-webkit-transition:top ease-out 0.3s;}
+#cocina .sobrinos .pimienta{top:40%;left:5%}
+#cocina .sobrinos .pimienta2{bottom:100px;left:50%}
+#cocina .sobrinos .panceta{top:450px;left:0%}
+#cocina .sobrinos .plato{top:-100px;left:15%}
+#cocina .sobrinos .perejil{top:45%;left:52%}
+#cocina .sobrinos .cuchillo{top:240px;left:60%}
+#cocina .sobrinos .tenedor{top:500px;left:85%}
+#cocina .sobrinos .ajo{bottom:50px;left:70%}
+
+#cocina .fotos{background:rgba(0,0,0,0.4);height:1100px;overflow:hidden}
+#cocina .fotos img{position:absolute;transition:top ease-out 0.3s;-webkit-transition:top ease-out 0.3s;}
+#cocina .fotos img.img-1{top:0px;left:-100px;z-index:5}
+#cocina .fotos img.img-2{left:50%;transform:translateX(-40%);-webkit-transform:translateX(-40%);z-index:8}
+#cocina .fotos img.img-3{right:-50px;z-index:2}
+#cocina .fotos img.img-4{left:-50px;z-index:2}
+#cocina .fotos img.img-5{right:-80px;z-index:6}
+#cocina .fotos img.img-6{left:50%;transform:translateX(-50%);-webkit-transform:translateX(-50%);z-index:5}
+#cocina .lo_mejor{background:rgba(0,0,0,0.4);position:relative;}
+#cocina .lo_mejor .copy{max-width:700px;position:relative;margin:auto;text-align:center;z-index:9;transition:top ease-out 0.3s;-webkit-transition:top ease-out 0.3s;}
+#cocina .lo_mejor .copy p{max-width:300px;margin:20px auto;font-size:2em;color:#848383;line-height:1.5;}
+#cocina .lo_mejor .copy h2{color:#FFF;font-weight:normal;font-size:3.5em;font-family: 'clicheregular';}
+#cocina .lo_mejor .copy hr{width:120px;margin:30px auto;border:none;height:1px;background:#cca36e}
+/*#cocina .lo_mejor .bt-ancla{display:block;padding-left:0;position:relative;line-height:60px;font-size:1.2em;color:#1f1f1f;text-transform:uppercase;letter-spacing:0.3em;text-align:center;max-width:320px;margin:auto;margin-top:20px;background:#cca36e url(../img/ar-bt-pedi.png) 30px center no-repeat;font-family: 'DINpro-m';top:80px;z-index:2}*/
+#cocina .lo_mejor img{position:absolute;transition:top ease-out 0.3s;-webkit-transition:top ease-out 0.3s;}
+#cocina .lo_mejor img.figaza{left:8%;top:0}
+#cocina .lo_mejor img.rodajas{left:15%;top:300px}
+#cocina .lo_mejor img.frances{left:75%;top:200px}
+#cocina .lo_mejor img.pimienta{left:75%;top:220px}
+#cocina .lo_mejor img.pimienta2{left:30%;top:400px}
+#cocina .lo_mejor img.cucharon{position:relative;display:block;margin:auto}
+
+#cotizar .copy{max-width:1100px;position:relative;margin:auto;text-align:center;transition:ease-out 0.5s all;-webkit-transition:ease-out 0.5s all;top:250px}
+#cotizar .copy h2{color:#FFF;font-weight:normal;font-size:3.5em;font-family: 'clicheregular';}
+#cotizar .copy hr{width:120px;margin:30px auto;border:none;height:1px;background:#cca36e}
+#cotizar .copy label{display:inline-block;height:80px;line-height:80px;color:#848383;font-size:1.5em;margin-bottom:10px}
+#cotizar .copy label div.input{display:inline-block;height:80px;position:relative;background:#383838;margin:0 10px;line-height:1}
+#cotizar .copy label div.input.error{border:3px solid #cca36e;border-radius:4px;}
+#cotizar .copy label div.input.error input{color:#cca36e}
+#cotizar .copy label div.input.s{width:100px}
+#cotizar .copy label div.input.l{width:250px}
+#cotizar .copy label div.input.lc{width:320px}
+#cotizar .copy label div.input.xl{width:500px}
+#cotizar .copy label div.input ul{position:absolute;top:80px;width:100%;max-height:240px;background:#383838;z-index:99;}
+#cotizar .copy label div.input ul li{list-style:none;display:block;line-height:2;font-size:1.5em;cursor:pointer;transition:all ease-in 0.3s;-webkit-transition:all ease-in 0.3s;text-transform:capitalize;}
+.slimScrollDiv{width:100% !important;}
+#cotizar .copy label div.input input{position:relative;top:0;left:0;height:100%;width:100%;color:#FFF;font-size:1.8em;text-align:center;border:none;background:none;margin:0;font-family:'DINpro-l';outline:none;-webkit-appearance:none;z-index:0;cursor:pointer;z-index:2;text-indent:-20px}
+#cotizar .copy label div.input:before{content:'';position:absolute;width:10px;height:10px;top:50%;right:15px;z-index:1;background:url(../img/arrow-down-golden.png) no-repeat center;margin-top:-5px}
+#cotizar .copy label div.input.mail:before{display:none}
+#cotizar .copy label div.input.date input{z-index:3;cursor:pointer}
+#cotizar button{display:block;padding-left:0;position:relative;line-height:60px;font-size:1.2em;color:#1f1f1f;text-transform:uppercase;letter-spacing:0.3em;text-align:center;width:180px;margin:auto;margin-top:20px;background:#cca36e;font-family: 'DINpro-m';top:80px;z-index:2;border:none;cursor:pointer;outline:none;overflow:hidden;transition:all ease-out 0.3s;-webkit-transition:all ease-out 0.3s;}
+#cotizar button img{transform:rotate(-90deg);-webkit-transform:rotate(-90deg);position:absolute;left:150px;top:50%;margin-top:-3px}
+#cotizar img.arrollado{left:50%;top:0;position:absolute;transition:top ease-out 0.3s;-webkit-transition:top ease-out 0.3s;}
+
+#thanks{font-size:1.5em;color:#848383;text-align:center;display:none;padding:20px;clear:both;top:80px;position:relative;line-height:1.2}
+
+#hablemos{min-height:0;}
+#hablemos video{opacity:0.3;display:block}
+#hablemos .copy{position:absolute;;text-align:center;top:50%;left:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%)}
+#hablemos .copy h2{color:#FFF;font-weight:normal;font-size:3.5em;font-family: 'clicheregular';}
+#hablemos .copy hr{width:120px;margin:30px auto;border:none;height:1px;background:#cca36e}
+#hablemos .copy p{color:#FFF;font-weight:normal;font-size:4.5em;font-family: 'DINpro-l';text-transform:uppercase;line-height:1.2}
+
+/*Footer*/
+footer{position:absolute;height:125px;padding:30px 0;width:100%;bottom:10px;left:0}
+footer .wp{width:100%;max-width:1200px;color:#aaa;font-size:13px;padding:0 40px;margin:auto}
+footer .nk {font-weight:700;opacity:.5;float:right;transition:all .3s;-webkit-transition:all .3s;}
+footer .nk div {position: relative;display:inline-block;vertical-align:middle; transition:all .3s;-webkit-transition:all .3s;margin-left:10px}
+footer .nk div img {transition: all .3s;}
+footer .nk div img:last-child {position: absolute; top: 0; left: 0; opacity: 0; transform: scale(0);}
+footer .logo-foot,
+footer p{float:left;}
+footer p{line-height:80px;padding-left:15px}
+footer p a.mail{color:#FFF;border-bottom:1px solid #ba9565}
+footer p strong{color:#ba9565;font-size:20px;margin:0 10px}
+footer p a.fb{position:relative}
+footer p a.fb img.w{position:relative;top:4px;margin-left:8px;}
+footer p a.fb img.g{position:absolute;right:0px;top:0;transition:all ease-out 0.3s;-webkit-transition:all ease-out 0.3s;opacity:0;z-index:1}
+
+@media (min-width:1100px){
+	nav li:hover > span{opacity:0.25}
+	nav li:hover > a{color:#000}
+	header .bt-menu:hover{background:#FFF}
+	header .bt-menu.open:hover{background:#4f4f4f;}
+	.bt-ancla:hover{color:#FFF}
+	.bt-ancla:hover img{animation:arrowHome 1s 1}
+	#cotizar .copy label div.input ul li:hover{background:#4f4f4f;color:#FFF}
+	footer .nk:hover div img:first-child {opacity: 0; transform: scale(0);}
+	footer .nk:hover div img:last-child {opacity: 1; transform: scale(1);}
+	footer .nk:hover {color: #ff5859; font-weight: 700;opacity: 1;}
+	#video-controls:hover{opacity:1}
+	#cotizar button:hover{background:#FFF;color:#cca36e}
+	#cotizar button:hover img{animation:arrowForm 0.5s 1}
+	#hablemos .copy p a:hover,
+	footer a.mail:hover,
+	footer a.fb:hover{color:#cca36e}
+	footer a.fb:hover > img.g{opacity:1}
+}
+@keyframes arrowHome {
+    0%   {top:0px;}
+    25%  {top:-10px;}
+    50%  {top:20px;}
+    75%  {top:-10px;}
+    100% {top:0px;}
+}
+@keyframes arrowForm {
+    0%   {left:150px;}
+    45%  {left:200px;}
+   	46%  {left:200px;display:none}
+    47%  {left:-15px;display:block}
+    100% {left:150px;}
+}
+
+@media (max-width:1024px){
+	#inicio .logo{left:0}
+	footer .wp{width:90%}
+	footer p{display:none}
+	#video-controls{opacity:1}
+}
+
+@media (max-width:960px){
+	#loader .num{left:-20px}
+	#loader i{left: 43px;}
+	#navScroll{z-index:-1;opacity:0}
+	/*1*/
+	#inicio .sarten{width:90%;top:80px}
+	/*2*/
+	#historia .copy{top:0;padding:50px}
+	#historia .firma svg{stroke-dasharray:1087, 0;}
+	/*3*/
+	#cocina .sobrinos .wp{margin:90px auto;}
+	#cocina .sobrinos .plato{top:auto;bottom:190px;left:5%}
+	#cocina .sobrinos .cuchillo{top: -170px;left: 60%;}
+	#cocina .sobrinos .tenedor,
+	#cocina .sobrinos .panceta{display:none}
+	#cocina .sobrinos .perejil{left:auto;right:6%;}
+	/*4*/
+	#cocina .wp{width:100%}
+	#cocina .fotos{height:auto;}
+	#cocina .fotos img{display:block;position:static;max-width:100%;margin:auto;transform:translateX(0%) !important;-webkit-transform:translateX(0%) !important;}
+	#cocina .lo_mejor img.figaza{left:-110px}
+	#cocina .lo_mejor img.rodajas{left:0}
+	#cocina .lo_mejor .copy{padding:130px 0}
+	#cocina .lo_mejor img.pimienta2, #cocina .lo_mejor img.cucharon{display:none}
+	/*5*/
+	#cotizar .copy{padding:80px 0;top:0}
+	#cotizar img.arrollado{display:none}
+	/*6*/
+	#hablemos{margin-top:80px}
+	#hablemos .copy{margin-top: -40px;}
+	#hablemos .copy p{font-size:2.5em}
+	#hablemos .copy hr{margin:20px auto}
+	/*footer*/
+	footer .nk{display:none}
+	footer .logo-foot{display:block;text-align:center;float:none}
+}
+@media (max-width:640px){
+	#inicio .wp{padding:100px 40px;}
+	#inicio .pimienta-1, #inicio .pimienta-2{width:20%;}
+	#inicio .espatula,
+	#inicio .romero,
+	#inicio .destapa,
+	#inicio .ajos{display:none}
+	#inicio .sarten{width:500px;top:-35px;left:62%;}
+	#inicio .logo{width:130px;height:120px;}
+	#inicio .logo span{right:10px}
+	#inicio h1{margin:40px auto;font-size:1.8em}
+	#inicio .vino{width:300px;bottom:170px}
+	/*2*/
+	#historia .copy{padding:50px 20px}
+	#historia .copy h2{max-width:230px;margin:auto}
+	#historia .copy p{font-size:1.6em}
+	/*3*/
+	#video-controls{width:95%;left:52%}
+	#cocina .wp{padding:0 40px}
+	#cocina .sobrinos h2{font-size:1.8em;}
+	#cocina .sobrinos .plato{bottom:auto;width:350px;top:-290px}
+	#cocina .sobrinos .cuchillo,
+	#cocina .sobrinos .tenedor{display:none}
+	#cocina .sobrinos .perejil{width:120px}
+	#cocina .sobrinos .pimienta{display:none}
+	#cocina .sobrinos .pimienta2{width:66px;left:20%}
+	#cocina .sobrinos .ajo{width:80px}
+	#fotos .wp{padding:0}
+	#cocina .fotos img{width:100%;}
+	#cocina .lo_mejor img.figaza,
+	#cocina .lo_mejor img.rodajas,
+	#cocina .lo_mejor img.pimienta,
+	#cocina .lo_mejor img.frances{display:none}
+	#cocina .lo_mejor .copy h2{max-width:187px;margin:auto;line-height:1.2}
+	#cocina .lo_mejor .copy p{font-size:1.6em;padding:0 20px;max-width:100%;margin-bottom:50px}
+	/*4*/
+	#cotizar .copy h2{max-width:200px;margin:auto}
+	#cotizar .copy label{font-size:0;float:left;clear:both;width:100%;padding:30px 10px;position:relative;margin:0;height:auto}
+	#cotizar .copy label .input{font-size:15px;margin:0 !important}
+	#cotizar .copy label .input:not(.s){width:100% !important}
+	#thanks,
+	#cotizar button{top:50px}
+	#cotizar .copy label:before{content:'';position:absolute;width:100%;font-size:15px;text-align:center;top:-30px;color:#848383;left:0}
+	#cotizar .copy label:first-child:before{content:'Invitados:'}
+	#cotizar .copy label:nth-child(2):before{content:'Lugar:'}
+	#cotizar .copy label:nth-child(3):before{content:'Fecha:'}
+	#cotizar .copy label:nth-child(4):before{content:'Momento del día:'}
+	#cotizar .copy label:nth-child(5):before{content:'Quiero que cocinen:'}
+	#cotizar .copy label:nth-child(6):before{content:'Mi mail es:'}
+	/*5*/
+	#hablemos{height:100%;overflow:hidden;}
+	#hablemos video{height:100%;transform:translateX(-50%);-webkit-transform:translateX(-50%);width:auto !important;}
+	#hablemos .copy p{font-size:2em}
+	
+}
+
+/*datepicker*/
+.ui-datepicker {
+	width:auto;
+	display: none;
+	background:#393939;
+	color:#FFF;
+	margin-top:15px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+.ui-datepicker-calendar thead{padding:0 10px;background:#525252}
+.ui-datepicker-calendar tbody{padding:10px}
+.ui-datepicker .ui-datepicker-header {
+	position: relative;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	position: absolute;
+	top: 2px;
+	width: 34px;
+	height: 34px;
+	overflow:hidden;
+	background-image:url(../img/arrow-down-golden.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	font-size:0;
+	cursor:pointer
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+	background-color:#404040;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 2px;
+	transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -8px;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+	line-height: 3.5em;
+	text-align: center;
+	font-size:1.1em
+}
+.ui-datepicker .ui-datepicker-title select {
+	font-size: 1em;
+	margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+	width: 45%;
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: 1.2em;
+	border-collapse: collapse;
+	margin: 0 0 .4em;
+}
+.ui-datepicker th {
+	height:43px;
+	text-align: center;
+	border: 0;
+	text-transform:uppercase;
+	vertical-align:middle
+}
+.ui-datepicker td {
+	border: 0;
+	height:43px;
+	width:43px;
+	border-radius:100%;
+	overflow:hidden;
+	vertical-align:middle
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color:inherit;
+	line-height:41px;
+	border-radius:100%;
+	box-sizing:border-box
+}
+.ui-datepicker td a:hover{border:1px solid #d0a36e}
+/*.ui-datepicker-today{background:#525252}*/
+.ui-datepicker-current-day{background:#d0a36e;color:#52483b}
+.ui-datepicker .ui-datepicker-buttonpane {
+	background-image: none;
+	margin: .7em 0 0 0;
+	padding: 0 .2em;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+	float: right;
+	margin: .5em .2em .4em;
+	cursor: pointer;
+	padding: .2em .6em .3em .6em;
+	width: auto;
+	overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+	float: left;
+}
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+	width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+	float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+	width: 95%;
+	margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+	width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+	width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+	width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+	border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+	clear: left;
+}
+.ui-datepicker-row-break {
+	clear: both;
+	width: 100%;
+	font-size: 0;
+}
+
+/* RTL support */
+.ui-datepicker-rtl {
+	direction: rtl;
+}
+.ui-datepicker-rtl .ui-datepicker-prev {
+	right: 2px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next {
+	left: 2px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+	right: 1px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+	left: 1px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+	clear: right;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+	float: left;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+	float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+	border-right-width: 0;
+	border-left-width: 1px;
+}

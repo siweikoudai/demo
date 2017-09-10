@@ -938,6 +938,7 @@ height:120px;
         $(this).attr("swiper-animate-duration","0.5s");
         $(this).attr("swiper-animate-delay","0.3s");
       });
+      $(".margin").css("height",$(window).height()-414);
       var mainSwiper = new Swiper('#main', {
           direction: 'vertical',
           slidesPerView: 'auto',

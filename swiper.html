@@ -1,0 +1,1363 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>GnomeAsiaSummit2017</title>
+<link href="https://2017.gnome.asia/images/share.jpg" rel="image_src" />        
+<meta property="og:title" content="Gnome Asia Summit 2017"/>
+<meta property="og:description" content="GnomeAsiaSummit2017"/>
+<meta property="og:url" content="https://2017.gnome.asia/"/>
+<meta property="og:site_name" content="Tío Luchín"/>
+<meta property="og:image" content="https://2017.gnome.asia/images/share.jpg" /> 
+<meta name="description" content="Gnome Asia Summit 2017"/>
+
+
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<link href="css/swiper.min.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/timeline.css" rel="stylesheet">
+<!-- <link href="css/fonts.css" rel="stylesheet">
+<link href="css/fonts2.css" rel="stylesheet"> -->
+<style>
+.swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+#main .slide-footer{
+height:120px;
+}
+
+</style>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="js/jquery.appear.js"></script>
+<script type="text/javascript" src="js/stellar.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/swiper.animate.min.js"></script>
+<script>
+  document.onreadystatechange = function(e){
+    if(document.readyState=="complete"){
+      $.stellar({
+        horizontalScrolling: false,
+        verticalOffset: 40
+      });
+    }
+  }
+</script>
+
+</head>
+<body>
+<div id="loader" style="display: none;">
+  <div class="num">0</div>
+  <i><div class="per"></div></i>
+</div>
+
+<!--nav导航-->
+    <header>
+      <div class="bt-menu"><i></i><i></i><i></i></div>
+      <nav><i></i>
+          <ul id="navScroll">
+            <li class="nav1" data-link="nav1"><span>01</span><a href="#">HOME</a></li>
+            <li class="nav2" data-link="nav2"><span>02</span><a href="#">ABOUT</a></li>
+            <li class="nav3" data-link="nav3"><span>03</span><a href="#">TIMELINE</a></li>
+            <li class="nav4" data-link="nav4"><span>04</span><a href="#">SCHEDULE</a></li>
+            <li class="nav5" data-link="nav5"><span>05</span><a href="#">TRANSPORT</a></li>
+            <li class="nav6" data-link="nav6"><span>01</span><a href="#">SPONSORS</a></li>
+            <li class="nav7" data-link="nav7"><span>02</span><a href="#">CONTRUBUTORS</a></li>
+            <li class="nav8" data-link="nav8"><span>03</span><a href="#">STAFF</a></li>
+          </ul>
+        </nav>
+    </header>
+<!--     <ul id="navScroll">
+      <i></i>
+      <li class="nav-main" data-section="nav1"><em></em><span>01</span><a href="#nav1"><strong>nav1</strong></a></li>
+      <li class="nav-main" data-section="nav2"><em></em><span>02</span><a href="#nav2"><strong>nav2</strong></a></li>
+      <li class="nav-main" data-section="nav3"><em></em><span>03</span><a href="#nav3"><strong>nav3</strong></a></li>
+      <li class="nav-main" data-section="nav4"><em></em><span>04</span><a href="#nav4"><strong>nav4</strong></a></li>
+      <li class="nav-main" data-section="nav5"><em></em><span>05</span><a href="#nav5"><strong>nav5</strong></a></li>
+    </ul> -->
+  
+  <!--页面-->
+    <div class="swiper-container" id="main">
+        <div class="swiper-wrapper">
+            <!--home-->
+            <div class="swiper-slide slide-home">
+              <div class="wp">
+                <div class="spoon">
+                  <img class="ani randomEffect" src="images/spoon.png"/>
+                </div>
+                <div class="logo">
+                  <img class="ani randomEffect" src="images/gnome.asia.png"/> 
+                </div>
+                <div class="summit2017">
+                  <img class="ani randomEffect" src="images/summit2017.png"/>
+                  <a href="#Ticket" class="button"><img class="ani randomEffect" src="images/ticket.png"/></a>
+                  <a href="#Attend" class="button"><img class="ani randomEffect" src="images/meeting.png"/></a>
+                </div>
+              </div>
+              <div class="ingredients">
+              <div class="ingredients01">
+                <img class="ani" data-effect="fadeInDown" src="images/ingredients_01.png"/>
+                <img class="ani" data-effect="fadeInDown" src="images/ingredients_02.png"/>
+                <img class="ani" data-effect="fadeInDown" src="images/ingredients_03.png"/>
+                <img class="ani" data-effect="fadeInDown" src="images/ingredients_04.png"/>
+                <img class="ani" data-effect="fadeInDown" src="images/ingredients_05.png"/>
+              </div>
+              <div class="ingredients02">
+                <img class="ani" data-effect="fadeInLeft" src="images/ingredients_06.png"/>
+                <img class="ani" data-effect="fadeInRight" src="images/ingredients_07.png"/>
+              </div>
+              <div class="ingredients03">
+                <img class="ani" data-effect="fadeInLeft" src="images/ingredients_08.png"/>
+                <img class="ani" data-effect="fadeInRight" src="images/ingredients_09.png"/>
+              </div>
+              <em></em> 
+            </div>
+            </div>
+            <!--about-->
+            <div class="swiper-slide slide-about">
+              <div class="container wp">
+                    <div class="title"><img src="images/about.png"/></div>
+                    <div class="content">
+                      <p>　　COSCUP是由台灣開放原始碼社群聯合推動的年度研討會，起源於2006年，是台灣自由軟體運動(FOSSM)重要的推動者之一。活動包括有講座、攤位、社團同樂會等，除了邀請國際的重量級演講者之外，台灣本土的自由軟體推動者也經常在此發表演說，會議的發起人、工作人員與講者都是志願參與的志工。</p>          
+                      <p>　　COSCUP的宗旨在於提供一個聯結開放原始碼開發者、使用者與推廣者的平台。希望藉由每年一度的研討會，來推動自由及開放原始碼軟體(FLOSS)。</p>
+                      <p>　　由於有許多贊助商及熱心捐助者，所有議程都是免費參加，但因會場人數限制，通常在一開放網路報名後就會立刻額滿。</p>
+                  </div>
+                </div>
+            </div>
+            <!--timeline-->
+            <div class="swiper-slide slide-timeline">
+              <div class="container wp">
+                <div class="title">TIMELINE</div>
+                <div>TIMELINE</div>
+                <!--div class="swiper-container swiper-container-vertical swiper-container-free-mode" id="timeline">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-active">
+                    <div class="container wp">
+                      <div class="content">
+                      <div class="main">
+                        <ul class="cbp_tmtimeline">
+                          <li>
+                            <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>4/10/13</span><span>18:30</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-phone"></div>
+                            <div class="cbp_tmlabel">
+                              <h2>Ricebean black-eyed pea</h2>
+                              <p>Winter purslane courgette pumpkin quandong komatsuna fennel green bean cucumber watercress. Pea sprouts wattle seed rutabaga okra yarrow cress avocado grape radish bush tomato ricebean black-eyed pea maize eggplant. Cabbage lentil cucumber chickpea sorrel gram garbanzo plantain lotus root bok choy squash cress potato summer purslane salsify fennel horseradish dulse. Winter purslane garbanzo artichoke broccoli lentil corn okra silver beet celery quandong. Plantain salad beetroot bunya nuts black-eyed pea collard greens radish water spinach gourd chicory prairie turnip avocado sierra leone bologi.</p>
+                            </div>
+                          </li>
+                          <li>
+                            <time class="cbp_tmtime" datetime="2013-04-11T12:04"><span>4/11/13</span><span>12:04</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-screen"></div>
+                            <div class="cbp_tmlabel">
+                              <h2>Greens radish arugula</h2>
+                              <p>Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi.</p>
+                            </div>
+                          </li>
+                          <li>
+                            <time class="cbp_tmtime" datetime="2013-04-13 05:36"><span>4/13/13</span><span>05:36</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-mail"></div>
+                            <div class="cbp_tmlabel">
+                              <h2>Sprout garlic kohlrabi</h2>
+                              <p>Parsnip lotus root celery yarrow seakale tomato collard greens tigernut epazote ricebean melon tomatillo soybean chicory broccoli beet greens peanut salad. Lotus root burdock bell pepper chickweed shallot groundnut pea sprouts welsh onion wattle seed pea salsify turnip scallion peanut arugula bamboo shoot onion swiss chard. Avocado tomato peanut soko amaranth grape fennel chickweed mung bean soybean endive squash beet greens carrot chicory green bean. Tigernut dandelion sea lettuce garlic daikon courgette celery maize parsley komatsuna black-eyed pea bell pepper aubergine cauliflower zucchini. Quandong pea chickweed tomatillo quandong cauliflower spinach water spinach.</p>
+                            </div>
+                          </li>
+                          <li>
+                            <time class="cbp_tmtime" datetime="2013-04-15 13:15"><span>4/15/13</span><span>13:15</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-phone"></div>
+                            <div class="cbp_tmlabel">
+                              <h2>Watercress ricebean</h2>
+                              <p>Peanut gourd nori welsh onion rock melon mustard j铆cama. Desert raisin amaranth kombu aubergine kale seakale brussels sprout pea. Black-eyed pea celtuce bamboo shoot salad kohlrabi leek squash prairie turnip catsear rock melon chard taro broccoli turnip greens. Fennel quandong potato watercress ricebean swiss chard garbanzo. Endive daikon brussels sprout lotus root silver beet epazote melon shallot.</p>
+                            </div>
+                          </li>
+                          <li>
+                            <time class="cbp_tmtime" datetime="2013-04-16 21:30"><span>4/16/13</span><span>21:30</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
+                            <div class="cbp_tmlabel">
+                              <h2>Courgette daikon</h2>
+                              <p>Parsley amaranth tigernut silver beet maize fennel spinach. Ricebean black-eyed pea maize scallion green bean spinach cabbage j铆cama bell pepper carrot onion corn plantain garbanzo. Sierra leone bologi komatsuna celery peanut swiss chard silver beet squash dandelion maize chicory burdock tatsoi dulse radish wakame beetroot.</p>
+                            </div>
+                          </li>
+                          <li>
+                            <time class="cbp_tmtime" datetime="2013-04-17 12:11"><span>4/17/13</span><span>12:11</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-screen"></div>
+                            <div class="cbp_tmlabel">
+                              <h2>Greens radish arugula</h2>
+                              <p>Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi.</p>
+                            </div>
+                          </li>
+                          <li>
+                            <time class="cbp_tmtime" datetime="2013-04-18 09:56"><span>4/18/13</span><span>09:56</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-phone"></div>
+                            <div class="cbp_tmlabel">
+                              <h2>Sprout garlic kohlrabi</h2>
+                              <p>Parsnip lotus root celery yarrow seakale tomato collard greens tigernut epazote ricebean melon tomatillo soybean chicory broccoli beet greens peanut salad. Lotus root burdock bell pepper chickweed shallot groundnut pea sprouts welsh onion wattle seed pea salsify turnip scallion peanut arugula bamboo shoot onion swiss chard. Avocado tomato peanut soko amaranth grape fennel chickweed mung bean soybean endive squash beet greens carrot chicory green bean. Tigernut dandelion sea lettuce garlic daikon courgette celery maize parsley komatsuna black-eyed pea bell pepper aubergine cauliflower zucchini. Quandong pea chickweed tomatillo quandong cauliflower spinach water spinach.</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-scrollbar" style="opacity: 0;">
+                  <div class="swiper-scrollbar-drag" style="height: 176.4px;"></div>
+                </div>
+              </div-->
+
+
+              </div>
+
+            </div>
+            <!--schedule-->
+            <div class="swiper-slide slide-schedule">
+              <div class="swiper-container" id="schedule">
+                  <div class="fixed">
+                      <div class="title"><img src="images/schedule.png"/></div>
+                      <div class="rooms">
+                      <div class="time"></div>
+                      <div class="room">
+                        <p>ROOM</p><p>301<p>
+                      </div>
+                      <div class="room">
+                        <p>ROOM</p><p>302<p>
+                      </div>
+                      <div class="room">
+                        <p>ROOM</p><p>303<p>
+                      </div>
+                      <div class="room">
+                        <p>ROOM</p><p>304<p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <div class="swiper-container swiper-container-vertical swiper-container-free-mode" id="schedule01">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide swiper-slide-active">
+                                <div class="container wp">
+                                  <div class="content">
+                                  <div class="timeline">
+                                    <div class="times">
+                                      <div class="time">-9:00-</div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  <div class="times">
+                                    <div class="time">-14:00-</div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="times">
+                                      <div class="time">-15:00-</div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                            <!--             <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div> -->
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="times"></div>
+                                    <div class="margin"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              </div>
+                            </div>
+                          <div class="swiper-scrollbar" style="opacity: 0;">
+                            <div class="swiper-scrollbar-drag" style="height: 176.4px;"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="swiper-container swiper-container-vertical swiper-container-free-mode" id="schedule02">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="container wp">
+                                  <div class="content">
+                                  <div class="timeline">
+                                    <div class="times">
+                                      <div class="time">-9:00-</div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  <div class="times">
+                                    <div class="time">-14:00-</div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="times">
+                                      <div class="time">-15:00-</div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                            <!--             <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div> -->
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="times"></div>
+                                    <div class="margin"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </div>
+                          <div class="swiper-scrollbar" style="opacity: 0;">
+                            <div class="swiper-scrollbar-drag" style="height: 176.4px;"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="swiper-container swiper-container-vertical swiper-container-free-mode" id="schedule03">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-active">
+                              <div class="container wp">
+                                  <div class="content">
+                                  <div class="timeline">
+                                    <div class="times">
+                                      <div class="time">-9:00-</div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  <div class="times">
+                                    <div class="time">-15:00-</div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="times">
+                                      <div class="time">-9:00-</div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                            <!--             <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div> -->
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="event">
+                                        <div class="event-box">
+                                          <div class="event-content">
+                                            <p>xxxx</p>
+                                            <p>WHY WE SHOULD</p>
+                                            <p>USE THE OPEN</p>
+                                            <p>DOCUMENT</p>
+                                            <p>FORMAT FOR OUR</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="times"></div>
+                                    <div class="margin"></div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="swiper-scrollbar" style="opacity: 0;">
+                            <div class="swiper-scrollbar-drag" style="height: 176.4px;"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div class="swiper-pagination swiper-pagination-schedule"></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide slide-transport">
+              <div class="swiper-container" id="transport">
+                  <div class="title"><img src="images/transport.png"/></div>
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide slide-transport1">
+                        <div class="container wp">
+                          <div class="content">
+                            <div class="map"><iframe id="cqu_map" class="map" src="" width="100%" height="100%" frameborder="0" scrolling="no" style="border:0" allowfullscreen></iframe></div>
+                            <div class="text">
+                              <p>GNOME.Asia Summit 2017 invites proposals for presentations at the conference.</p>
+                              <br>
+                              <p>GNOME.Asia Summit is the featured annual GNOME Conference in Asia. The event focuses primarily on the GNOME desktop, but also covers applications and the development platform tools. It brings together the GNOME community in Asia to provide a forum for users.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide  slide-transport2">
+                        <div class="container wp">
+                          <div class="content">
+                            <div class="map"><iframe id="hotel_map1" class="map" src="" width="100%" height="100%" frameborder="0" scrolling="no" style="border:0" allowfullscreen></iframe></div>
+                            <div class="text">
+                              <p>GNOME.Asia Summit 2017 invites proposals for presentations at the conference.</p>
+                              <br>
+                              <p>GNOME.Asia Summit is the featured annual GNOME Conference in Asia. The event focuses primarily on the GNOME desktop, but also covers applications and the development platform tools. It brings together the GNOME community in Asia to provide a forum for users.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide slide-transport3">
+                        <div class="container wp">
+                          <div class="content">
+                            <div class="map"><iframe id="hotel_map2" class="map" src="" width="100%" height="100%" frameborder="0" scrolling="no" style="border:0" allowfullscreen></iframe></div>
+                            <div class="text">
+                              <p>GNOME.Asia Summit 2017 invites proposals for presentations at the conference.</p>
+                              <br>
+                              <p>GNOME.Asia Summit is the featured annual GNOME Conference in Asia. The event focuses primarily on the GNOME desktop, but also covers applications and the development platform tools. It brings together the GNOME community in Asia to provide a forum for users.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+            </div>
+            <div class="swiper-slide slide-sponsor">
+              <div class="container wp">
+                <div class="title"><img src="images/contributors.png"/></div>
+                <div class="content">
+                    <div class="diamond">
+                    <div class="grade">D I A M O N D</div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                    </div>
+                    
+                    
+                    <div class="platinum">
+                    <div class="grade">P L A T I N U M</div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                    </div>
+
+                    
+                    <div class="gold">
+                    <div class="grade">G O L D</div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                    </div>
+
+                    
+                    <div class="sliver">
+                    <div class="grade">S L I V E R</div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide slide-contributors">
+              <div class="container wp">
+                <div class="title"><img src="images/contributors.png"/></div>
+                <div class="content">
+                    <div class="grade">SPONSORS</div>
+                    <div class="sponsors">
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                    </div>
+                    
+                    <div class="grade">CO-SPONSORS</div>
+                    <div class="co-sponsors">
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                    </div>
+
+                    
+                    <div class="grade">THANKS</div>
+                    <div class="thanks">
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                      <div class="logo-box"><img src="images/contributor.png"></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide slide-staff">
+              <div class="container wp">
+                <div class="title"><img src="images/staff.png"/></div>
+                <div class="content">
+                    <div class="staff-box">
+                    <div class="staff-title">DESIGN</div>
+                      <p>ZHANGXIAOMNG</p>
+                      <p>LIXIAOHUA</p>
+                      <p>HANMEIMEI</p>
+                      <p>LILEI</p>
+                    </div>
+                    
+                    <div class="staff-box">
+                    <div class="staff-title">DESIGN</div>
+                      <p>ZHANGXIAOMNG</p>
+                      <p>LIXIAOHUA</p>
+                      <p>HANMEIMEI</p>
+                      <p>LILEI</p>
+                    </div>
+
+                    <div class="staff-box">
+                    <div class="staff-title">DESIGN</div>
+                      <p>ZHANGXIAOMNG</p>
+                      <p>LIXIAOHUA</p>
+                      <p>HANMEIMEI</p>
+                      <p>LILEI</p>
+                    </div>
+
+                    <div class="staff-box">
+                    <div class="staff-title">DESIGN</div>
+                      <p>ZHANGXIAOMNG</p>
+                      <p>LIXIAOHUA</p>
+                      <p>HANMEIMEI</p>
+                      <p>LILEI</p>
+                    </div>
+
+                    <div class="staff-box">
+                    <div class="staff-title">DESIGN</div>
+                      <p>ZHANGXIAOMNG</p>
+                      <p>LIXIAOHUA</p>
+                      <p>HANMEIMEI</p>
+                      <p>LILEI</p>
+                    </div>
+
+                    <div class="staff-box">
+                    <div class="staff-title">DESIGN</div>
+                      <p>ZHANGXIAOMNG</p>
+                      <p>LIXIAOHUA</p>
+                      <p>HANMEIMEI</p>
+                      <p>LILEI</p>
+                    </div>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide-footer">
+              <footer>
+              <p>© 2017 GNOME（TM）.ASIA</p>
+              <p>
+              <a href="https://www.facebook.com/linuxstory/"><i class="icon-facebook"></i></a>
+              <a href="https://twitter.com/linuxstory/"><i class="icon-twitter"></i></a>
+              <a href="https://google.com/+LinuxStory/"><i class="icon-google"></i></a>
+              <a href="#"><i class="icon-tumblr"></i></a>
+              <a href="https://weibo.com/linuxstory/"><i class="icon-weibo"></i></a>
+              </p>
+              </footer>
+            </div>
+        </div>
+    </div>
+    <script>
+      $(".ani").each(function(index,ele){
+        if($(this).hasClass("randomEffect")){
+          var randomEffects = ["fadeInUp","fadeInDown","fadeInLeft","fadeInRight"];
+          $(this).attr("swiper-animate-effect",randomEffects[Math.floor(Math.random()*3)]);
+        }else{
+          $(this).attr("swiper-animate-effect",$(this).data("effect"));
+        }
+        $(this).attr("swiper-animate-duration","0.5s");
+        $(this).attr("swiper-animate-delay","0.3s");
+      });
+      var mainSwiper = new Swiper('#main', {
+          direction: 'vertical',
+          slidesPerView: 'auto',
+          parallax: true,
+          mousewheelControl: true,
+          onInit: function(swiper){
+            swiperAnimateCache(swiper);  
+            swiperAnimate(swiper);
+            $("#navScroll li").each(function(index,ele){
+                $(this).click(function(){swiper.slideTo(index)});
+            });
+          }, 
+          onSlideChangeEnd: function(swiper){ 
+            swiperAnimate(swiper);
+          },
+          onSetTransition: function(swiper){
+            $("#navScroll li").each(function(index,ele){
+                $(this).removeClass("active");
+                if(index==swiper.activeIndex){
+                  $(this).addClass("active");
+                }
+            });
+            if(swiper.activeIndex==3){
+              swiper.params.onlyExternal=true;
+              swiper.disableMousewheelControl();
+            }else{
+              swiper.params.onlyExternal=false;
+              swiper.enableMousewheelControl();
+            }
+            if(swiper.activeIndex==4 && $("#cqu_map").attr("src")==""){
+              $("#cqu_map").attr("src","https://gaode.com/search?id=B0017822WN&city=500106&geoobj=106.45715%7C29.554432%7C106.462917%7C29.557242&query_type=IDQ&query=%E9%87%8D%E5%BA%86%E5%A4%A7%E5%AD%A6%E4%B8%BB%E6%95%99%E5%AD%A6%E6%A5%BC&zoom=18");
+            }
+            //timelineSwiper.setWrapperTranslate(-10);
+            schedule01Swiper.setWrapperTranslate(-10);
+            schedule02Swiper.setWrapperTranslate(-10);
+            schedule03Swiper.setWrapperTranslate(-10);
+          }
+      });
+      // var timelineSwiper = new Swiper('#timeline', {
+      //     scrollbar: '.swiper-scrollbar',
+      //     direction: 'vertical',
+      //     slidesPerView: 'auto',
+      //     freeMode: true,
+      //     freeModeMomentum : false,
+      //     mousewheelControl: true,
+      //     mousewheelSensitivity : 0.5,
+      //     onSetTransition: function(swiper,translate){
+      //       //父级锁定&解锁
+      //       if(mainSwiper.activeIndex==2||mainSwiper.activeIndex==3){
+      //         mainSwiper.params.onlyExternal=true;
+      //         mainSwiper.disableMousewheelControl();
+      //       }else{
+      //         mainSwiper.params.onlyExternal=false;
+      //         mainSwiper.enableMousewheelControl();
+      //       }
+      //       //timelineSwiper.setWrapperTranslate(-10);
+      //       schedule01Swiper.setWrapperTranslate(-10);
+      //       schedule02Swiper.setWrapperTranslate(-10);
+      //       schedule03Swiper.setWrapperTranslate(-10);
+      //       //translate 一直为0，不可直接用
+      //       nowTranslate=swiper.translate;
+      //       if(typeof(beforeTranslate)=="undefined"){
+      //         beforeTranslate=0;
+      //       };
+      //       slideHeight=swiper.slides[0].scrollHeight;
+      //       swiperHeight=swiper.height;
+      //       if(nowTranslate>-2 && nowTranslate > beforeTranslate){//当前到顶
+      //         mainSwiper.slideTo(1);
+      //         mainSwiper.params.onlyExternal=false;
+      //         mainSwiper.enableMousewheelControl();
+      //         beforeTranslate = -1;
+      //       }
+      //       if(slideHeight-swiperHeight+nowTranslate<2 && nowTranslate < beforeTranslate){//当前到底
+      //         mainSwiper.slideTo(3);
+      //         $("#timeline .swiper-wrapper").css("transform","matrix(1, 0, 0, 1, 0, 0)");
+      //         beforeTranslate = 1;
+      //       }else{
+      //         beforeTranslate=nowTranslate;
+      //       }
+      //     },
+      //      onReachBeginning:function(swiper){
+      //       if(swiper.translate>0){
+      //         mainSwiper.slideTo(1);
+      //       }
+      //        if(swiper.translate<(swiper.height-swiper.slides[0].scrollHeight)){
+      //         mainSwiper.slideTo(3);
+      //       }
+      //      }
+      // });
+      var scheduleSwiper = new Swiper('#schedule', {
+          direction: 'vertical',
+          pagination: '.swiper-pagination-schedule',
+          paginationClickable: true,
+          autoHeight: true,
+          slidesPerView: 1,
+          mousewheelControl: true,
+          onSetTransition: function(swiper,translate){
+            //父级锁定&解锁
+            if(mainSwiper.activeIndex==3){
+              mainSwiper.params.onlyExternal=true;
+              mainSwiper.disableMousewheelControl();
+            }else{
+              mainSwiper.params.onlyExternal=false;
+              mainSwiper.enableMousewheelControl();
+            }
+            //timelineSwiper.setWrapperTranslate(-10);
+            schedule01Swiper.setWrapperTranslate(-10);
+            schedule02Swiper.setWrapperTranslate(-10);
+            schedule03Swiper.setWrapperTranslate(-10);
+
+          }
+      });
+
+      var schedule01Swiper = new Swiper('#schedule01',{
+          scrollbar: '.swiper-scrollbar',
+          direction: 'vertical',
+          slidesPerView: 'auto',
+          freeMode: true,
+          freeModeMomentum : false,
+          mousewheelControl: true,
+          mousewheelSensitivity : 0.775,
+          onSetTransition: function(swiper,translate){
+            //父级锁定&解锁
+            if(scheduleSwiper.activeIndex==0){
+              scheduleSwiper.params.onlyExternal=true;
+              scheduleSwiper.disableMousewheelControl();
+            }else{
+              scheduleSwiper.params.onlyExternal=false;
+              scheduleSwiper.enableMousewheelControl();
+            }
+
+            //translate 一直为0，不可直接用
+            nowTranslate=swiper.translate;
+            if(typeof(beforeTranslate)=="undefined"){
+              beforeTranslate=0;
+            };
+            slideHeight=swiper.slides[0].scrollHeight;
+            swiperHeight=swiper.height;
+            if(nowTranslate>-2 && nowTranslate > beforeTranslate){//当前到顶
+              mainSwiper.slideTo(2);
+              mainSwiper.params.onlyExternal=false;
+              mainSwiper.enableMousewheelControl();
+              beforeTranslate = -1;
+            }
+            if(slideHeight-swiperHeight+nowTranslate<2 && nowTranslate < beforeTranslate){//当前到底
+              scheduleSwiper.slideTo(1);
+              $("#schedule01 .swiper-wrapper").css("transform","matrix(1, 0, 0, 1, 0, 0)");
+              beforeTranslate = 1;
+            }else{
+              beforeTranslate=nowTranslate;
+            }
+          },
+           onReachBeginning:function(swiper){
+            if(swiper.translate>0){
+              scheduleSwiper.slideTo(0);
+            }
+             if(swiper.translate<(swiper.height-swiper.slides[0].scrollHeight)){
+              scheduleSwiper.slideTo(1);
+            }
+           }
+          });
+
+      var schedule02Swiper = new Swiper('#schedule02',{
+          scrollbar: '.swiper-scrollbar',
+          direction: 'vertical',
+          slidesPerView: 'auto',
+          freeMode: true,
+          freeModeMomentum : false,
+          mousewheelControl: true,
+          mousewheelSensitivity : 0.775,
+          onSetTransition: function(swiper,translate){
+            //父级    
+            if(scheduleSwiper.activeIndex==1){
+              scheduleSwiper.params.onlyExternal=true;
+              scheduleSwiper.disableMousewheelControl();
+            }else{
+              scheduleSwiper.params.onlyExternal=false;
+              scheduleSwiper.enableMousewheelControl();
+            }
+
+            //translate 一直为0，不可直接用
+            nowTranslate=swiper.translate;
+            if(typeof(beforeTranslate)=="undefined"){
+              beforeTranslate=0
+            };
+            slideHeight=swiper.slides[0].scrollHeight;
+            swiperHeight=swiper.height;
+            if(nowTranslate>-2 && nowTranslate > beforeTranslate){
+              scheduleSwiper.slideTo(0);
+              beforeTranslate = -1;
+            }
+            if(slideHeight-swiperHeight+nowTranslate<2 && nowTranslate < beforeTranslate){
+              scheduleSwiper.slideTo(2);
+              $("#schedule02 .swiper-wrapper").css("transform","matrix(1, 0, 0, 1, 0, 0)")
+              beforeTranslate=1;
+            }else{
+              beforeTranslate=nowTranslate;
+            }
+          },
+           onReachBeginning:function(swiper){
+             if(swiper.translate>0){
+              scheduleSwiper.slideTo(1);
+            }
+             if(swiper.translate<(swiper.height-swiper.slides[0].scrollHeight)){
+              scheduleSwiper.slideTo(2);
+            }
+           }
+          });
+
+      var schedule03Swiper = new Swiper('#schedule03',{
+          scrollbar: '.swiper-scrollbar',
+          direction: 'vertical',
+          slidesPerView: 'auto',
+          freeMode: true,
+          freeModeMomentum : false,
+          mousewheelControl: true,
+          mousewheelSensitivity : 0.775,
+          onSetTransition: function(swiper,translate){
+            //父级    
+            if(scheduleSwiper.activeIndex==2){
+              scheduleSwiper.params.onlyExternal=true;
+              scheduleSwiper.disableMousewheelControl();
+            }else{
+              scheduleSwiper.params.onlyExternal=false;
+              scheduleSwiper.enableMousewheelControl();
+            }
+
+            //translate 一直为0，不可直接用
+            nowTranslate=swiper.translate;
+            if(typeof(beforeTranslate)=="undefined"){
+              beforeTranslate=0
+            };
+            slideHeight=swiper.slides[0].scrollHeight;
+            swiperHeight=swiper.height;
+            if(nowTranslate>-2 && nowTranslate > beforeTranslate){
+              scheduleSwiper.slideTo(1);
+              beforeTranslate = -1;
+            }
+            if(slideHeight-swiperHeight+nowTranslate<2 && nowTranslate < beforeTranslate){
+              mainSwiper.slideTo(4);
+              mainSwiper.params.onlyExternal=false;
+              mainSwiper.enableMousewheelControl();
+              $("#schedule03 .swiper-wrapper").css("transform","matrix(1, 0, 0, 1, 0, 0)")
+              beforeTranslate = 1;
+            }else{
+              beforeTranslate=nowTranslate;
+            }
+          },
+           onReachBeginning:function(swiper){
+             if(swiper.translate>0){
+              scheduleSwiper.slideTo(1);
+            }
+             if(swiper.translate<(swiper.height-swiper.slides[0].scrollHeight)){
+              mainSwiper.slideTo(4);
+            }
+           }
+          });
+
+      var transportSwiper = new Swiper('#transport', {
+          direction: 'horizontal',
+          slidesPerView: 1,
+          mousewheelControl: false,
+          prevButton:'.swiper-button-prev',
+          nextButton:'.swiper-button-next',
+          onSetTransition: function(swiper,translate){
+            if(swiper.activeIndex==1 && $("#hotel_map1").attr("src")==""){
+              $("#hotel_map1").attr("src","https://gaode.com/search?id=B001702171&city=500106&geoobj=106.577472%7C29.556369%7C106.579741%7C29.557361&query_type=IDQ&query=%E9%87%8D%E5%BA%86%E4%B8%BD%E8%8B%91%E5%A4%A7%E9%85%92%E5%BA%97&zoom=18");
+            }
+            if(swiper.activeIndex==2 && $("#hotel_map2").attr("src")==""){
+              $("#hotel_map2").attr("src","https://gaode.com/search?query=%E7%93%A6%E8%88%8D%E5%9B%BD%E9%99%85%E9%9D%92%E5%B9%B4%E6%97%85%E8%88%8D(%E9%87%8D%E5%BA%86%E8%A7%A3%E6%94%BE%E7%A2%91%E8%BE%83%E5%9C%BA%E5%8F%A3%E5%9C%B0%E9%93%81%E7%AB%99%E5%BA%97)&city=500000&geoobj=106.570113%7C29.55144%7C106.57478%7C29.5536&zoom=18");
+            }
+          }
+        });
+    </script>
+
+<script type="text/javascript" src="js/TweenMax.min.js"></script>  
+<script type="text/javascript" src="js/jquery.superscrollorama.js"></script>
+
+<script type="text/javascript">
+
+      $(document).ready(function() {
+        var controller = $.superscrollorama();
+        // showcase tweens
+        // controller.addTween('#showcase h1', TweenMax.from( $('#showcase h1'), .75, {css:{letterSpacing:20,opacity:0}, ease:Quad.easeOut}));
+        // controller.addTween('#showcase p', TweenMax.from( $('#showcase p'), 1, {css:{opacity:0}, ease:Quad.easeOut}));
+        $('#showcase1 .gallery div').css('position','relative').each(function() {
+          controller.addTween('#showcase1 .gallery', TweenMax.from( $(this), 1, {delay:Math.random()*.2,css:{left:Math.random()*200-100,top:Math.random()*200-100,opacity:0}, ease:Back.easeOut}));
+        });
+         $('#shedule1 iframe').css('position','relative').each(function() {
+          controller.addTween('#shedule1 iframe', TweenMax.from( $(this), 1, {delay:Math.random()*.2,css:{left:Math.random()*200-100,top:Math.random()*200-100,opacity:0}, ease:Back.easeOut}));
+        });
+        $('#showcase2 .gallery div').css('position','relative').each(function() {
+          controller.addTween('#showcase2 .gallery', TweenMax.from( $(this), 1, {delay:Math.random()*.2,css:{left:Math.random()*200-100,top:Math.random()*200-100,opacity:0}, ease:Back.easeOut}));
+        });
+      });
+</script>
+
+
+  <script>
+    // funciones
+    var load = 0, fake = 0;
+    document.onreadystatechange = function(e){
+      show();
+    if(document.readyState=="interactive" && document.readyState=="complete"){
+      $('html').addClass('loading');
+      var int = setInterval(function(){
+          var prev = parseInt($('.num').text());
+          if(prev >= 100){
+            clearInterval(int);
+            show();
+          } else {
+            var num = Math.floor((Math.random() * 5) + 1);
+            var res = prev+num;
+            if(res > 100){
+              res = 100;
+              if(load == 1){
+                show();
+              } else {
+                fake = 1;
+              }
+            }
+            $('.per').css('height', res + '%');
+            $('.num').text(res + '%');
+          }
+        },100);
+      }
+    }
+    function show(){
+      $('#loader').fadeOut(400, 'easeInQuint');
+    }
+    $(window).scroll(function(){
+      navMainScroll();
+    });
+    $(window).load(function(){
+      load = 1;      
+      if(fake){
+        show();
+        console.log('fake');
+      };
+
+    });
+    $(document).ready(function(e) {
+      navMainScroll();
+      //nav
+      $("nav li").on('click', function(e){
+        e.preventDefault();
+        //nav跳转
+      });
+
+      //btmenu
+      $('.bt-menu').on('click', function(e){
+        e.preventDefault();
+        if($(this).hasClass('open')){
+          closeMenu();
+        }else{
+          openMenu();
+        }
+        $(this).toggleClass('open');
+      }); 
+      
+    });
+
+    /////FUNCIONES
+    //botones
+    function navMainScroll(){ 
+      var scrol = $(window).scrollTop();
+      // nav lateral
+      $(".nav-main").each(function(e,i){
+        var sec = $("#"+$(this).data("section"));
+            secClass =$(this).data("section");
+        
+        if (!sec.offset()) return
+
+          if( (scrol+$(window).height()/2) >= sec.offset().top && (sec.offset().top+sec.height()) > scrol && !sec.hasClass("active")){
+
+          $(".nav-main").removeClass("active");
+          $("nav li").removeClass("active");
+
+          $(this).addClass("active");
+          $("nav li."+secClass).addClass("active");
+        }
+      }); 
+    }
+
+    function openMenu(){ 
+      $('header').addClass('op');
+      var menu = $('nav');
+      btMenu = $('.bt-menu');
+      li = menu.find('li');
+      li.removeClass('view');
+      btMenu.animate({'left':220}, 200, 'easeOutQuart', function(){
+        menu.animate({'left': 0}, 300, 'easeOutQuart', function(){
+          var i = 0;
+          var menuX = setInterval(function() {
+              li.eq(i).addClass('view')
+              i++;
+              if(i > li.length){
+                clearInterval(menuX); 
+              }
+            }, 100);  
+        }); 
+      });
+    }
+
+    function closeMenu(){
+      $('header').removeClass('op');
+      var menu = $('nav');
+      btMenu = $('.bt-menu');
+      li = menu.find('li');   
+      li.each(function(index, element) {
+        $(this).removeClass('view');
+      });
+      menu.animate({'left':'-250px'}, 300, 'easeInQuart');
+      btMenu.animate({'left': '23px'}, 100, 'easeInQuart');
+    }
+
+
+
+
+
+  </script>
+</body>
+</html>

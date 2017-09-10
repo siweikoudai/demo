@@ -2,88 +2,7 @@
 <html>
 <head>
 <meta charset='utf-8' />
-<link href='css/fullcalendar.min.css' rel='stylesheet' />
-<link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
-<link href='css/scheduler.min.css' rel='stylesheet' />
-<script src='js/moment.min.js'></script>
-<script src='js/jquery-1.11.2.min.js'></script>
-<script src='js/fullcalendar.min.js'></script>
-<script src='js/scheduler.min.js'></script>
 <script>
-
-	$(function() { // document ready
-
-		$('#calendar').fullCalendar({
-			schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
-			now: '2017-9-02',
-			editable: false,
-			aspectRatio: 1.8,
-			scrollTime: '08:00',
-			header: {
-				left: 'today prev,next',
-				center: 'title',
-				right: 'timelineDay,timelineThreeDays,agendaWeek,month'
-			},
-			defaultView: 'timelineDay',
-			views: {
-				timelineThreeDays: {
-					type: 'timeline',
-					duration: { days: 3 }
-				}
-			},
-			resourceAreaWidth: '30%',
-			resourceColumns: [
-				{
-					labelText: 'Room',
-					field: 'title'
-				},
-				{
-					labelText: 'Occupancy',
-					field: 'occupancy'
-				}
-			],
-			resources: [
-				{ id: 'a', title: 'Auditorium A', occupancy: 40 },
-				{ id: 'b', title: 'Auditorium B', occupancy: 40, eventColor: 'green' },
-				{ id: 'c', title: 'Auditorium C', occupancy: 40, eventColor: 'orange' },
-				{ id: 'd', title: 'Auditorium D', occupancy: 40, children: [
-					{ id: 'd1', title: 'Room D1', occupancy: 10 },
-					{ id: 'd2', title: 'Room D2', occupancy: 10 }
-				] },
-				{ id: 'e', title: 'Auditorium E', occupancy: 40 },
-				{ id: 'f', title: 'Auditorium F', occupancy: 40, eventColor: 'red' },
-				// { id: 'g', title: 'Auditorium G', occupancy: 40 },
-				// { id: 'h', title: 'Auditorium H', occupancy: 40 },
-				// { id: 'i', title: 'Auditorium I', occupancy: 40 },
-				// { id: 'j', title: 'Auditorium J', occupancy: 40 },
-				// { id: 'k', title: 'Auditorium K', occupancy: 40 },
-				// { id: 'l', title: 'Auditorium L', occupancy: 40 },
-				// { id: 'm', title: 'Auditorium M', occupancy: 40 },
-				// { id: 'n', title: 'Auditorium N', occupancy: 40 },
-				// { id: 'o', title: 'Auditorium O', occupancy: 40 },
-				// { id: 'p', title: 'Auditorium P', occupancy: 40 },
-				// { id: 'q', title: 'Auditorium Q', occupancy: 40 },
-				// { id: 'r', title: 'Auditorium R', occupancy: 40 },
-				// { id: 's', title: 'Auditorium S', occupancy: 40 },
-				// { id: 't', title: 'Auditorium T', occupancy: 40 },
-				// { id: 'u', title: 'Auditorium U', occupancy: 40 },
-				// { id: 'v', title: 'Auditorium V', occupancy: 40 },
-				// { id: 'w', title: 'Auditorium W', occupancy: 40 },
-				// { id: 'x', title: 'Auditorium X', occupancy: 40 },
-				// { id: 'y', title: 'Auditorium Y', occupancy: 40 },
-				// { id: 'z', title: 'Auditorium Z', occupancy: 40 }
-			],
-			events: [
-				{ id: '1', resourceId: 'b', start: '2017-09-01T10:00:00', end: '2017-09-01T12:00:00', title: 'event 1' },
-				{ id: '2', resourceId: 'c', start: '2017-09-01T09:00:00', end: '2017-09-01T14:00:00', title: 'event 2' },
-				{ id: '3', resourceId: 'd', start: '2017-09-01T09:00:00', end: '2017-09-01T14:00:00', title: 'event 3' },
-				{ id: '4', resourceId: 'e', start: '2017-09-01T09:00:00', end: '2017-09-01T15:00:00', title: 'event 4' },
-				{ id: '5', resourceId: 'f', start: '2017-09-01T12:30:00', end: '2017-09-01T14:30:00', title: 'event 5' }
-			]
-		});
-	
-	});
-
 </script>
 <style>
 
@@ -105,7 +24,68 @@
 </head>
 <body>
 
-	<div id='calendar'></div>
+	    <div class="container wp">
+          <h1 class="title">SCHEDULE</h1>
+          <hr>
+          <div class="content" id="showcase2">
+              
+			  <div class="room">
+				<div class="room">
+					<p>ROOM</p><p>301<p>
+				</div>
+				<div class="room">
+					<p>ROOM</p><p>302<p>
+				</div>
+				<div class="room">
+					<p>ROOM</p><p>303<p>
+				</div>
+				<div class="room">
+					<p>ROOM</p><p>304<p>
+				</div>
+			  </div>
+              <div class="timeline">
+				<div class="time">-9:00-</div>
+				<div class="event">
+					<div class="event-content">
+						<p>xxxx</p>
+						<p>WHY WE SHOULD</p>
+						<p>USE THE OPEN</p>
+						<p>DOCUMENT</p>
+						<p>FORMAT FOR OUR</p>
+					</div>
+				</div>
+				<div class="event">
+					<div class="event-content">
+						<p>xxxx</p>
+						<p>WHY WE SHOULD</p>
+						<p>USE THE OPEN</p>
+						<p>DOCUMENT</p>
+						<p>FORMAT FOR OUR</p>
+					</div>
+				</div>
+				<div class="event">
+					<div class="event-content">
+						<p>xxxx</p>
+						<p>WHY WE SHOULD</p>
+						<p>USE THE OPEN</p>
+						<p>DOCUMENT</p>
+						<p>FORMAT FOR OUR</p>
+					</div>
+				</div>
+				<div class="event">
+					<div class="event-content">
+						<p>xxxx</p>
+						<p>WHY WE SHOULD</p>
+						<p>USE THE OPEN</p>
+						<p>DOCUMENT</p>
+						<p>FORMAT FOR OUR</p>
+					</div>
+				</div>
+              </div>
+
+
+          </div>
+      </div>
 
 </body>
 </html>

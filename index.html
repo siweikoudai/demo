@@ -16,6 +16,7 @@
 
 <link href="css/reset.css" rel="stylesheet">
 <link href="css/index.css" rel="stylesheet">
+<link href="css/jquery.fullpage.min.css" rel="stylesheet">
 <!-- <link href="css/fonts.css" rel="stylesheet">
 <link href="css/fonts2.css" rel="stylesheet"> -->
 <style>
@@ -27,6 +28,7 @@
 <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
 <script type="text/javascript" src="js/jquery.appear.js"></script>
 <script type="text/javascript" src="js/stellar.js"></script>
+<script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
 <script>
   document.onreadystatechange = function(e){
     if(document.readyState=="complete"){
@@ -159,15 +161,252 @@
         <hr>
     </div>
   </section>
+<style>
+#nav{
+  min-height: 800px;
+}
+#nav4 .title{
+  z-index: 10;
+}
+#nav4 .content {
+    font-size: 20px;
+    line-height: 1.5;
+    overflow: hidden;
+    height: 620px;
+}
+#nav4 .rooms{
+  position: relative;
+  width: 890px;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#nav4 .room{ 
+  color: #b3302c;
+  text-align: left;
+  font-size: 48px;
+  margin-left: 25px;
+  width:190px;
+  height: 300px;
+}
+#nav4 .timeline{ 
+  width:930px;
+  position: relative;
+  top:-300px;
+  z-index: 9;
+  height: 620px;
+  padding:0 10px;
+  overflow-y: auto;
+}
+#nav4 .times{ 
+  width:100%;
+  height: 300px;
+  margin:10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#nav4 .time{ 
+  color: #000;
+  font-size: 24px;
+  width:100px;
+  height: 300px;
+  display: inline-table;
+}
+#nav4 .event{ 
+  position: relative;
+  width:190px;
+  height: 300px;
+  display: inline-table;
+}
+#nav4 .event-box{
+  color:#000;
+  width:190px;
+  height: 300px;
+  border:1px solid #000;
+}
+#nav4 .event-content{
+  color: #b3302c;
+  text-align: right;
+  font-size: 20px;
+  text-align: right;
+  position: absolute;
+  bottom:10px;
+  right: 10px;
+}
 
+</style>
   <section id="nav4">
     <div class="container wp">
-        <h1 class="title">SHEDULE</h1>
-        <hr>
-        <div class="content" id="shedule1">
-           <iframe src="columns.html" frameborder="0" width="970" height="600" scrolling="auto"></iframe>
+      <h1 class="title">SCHEDULE</h1>
+      <hr>
+      <div class="content" id="fullpage">
+      <div class="rooms">
+        <div class="time"></div>
+        <div class="room">
+          <p>ROOM</p><p>301<p>
         </div>
+        <div class="room">
+          <p>ROOM</p><p>302<p>
+        </div>
+        <div class="room">
+          <p>ROOM</p><p>303<p>
+        </div>
+        <div class="room">
+          <p>ROOM</p><p>304<p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="times">
+          <div class="time">-9:00-</div>
+          <div class="event">
+            <div class="event-box">
+              <div class="event-content">
+                <p>xxxx</p>
+                <p>WHY WE SHOULD</p>
+                <p>USE THE OPEN</p>
+                <p>DOCUMENT</p>
+                <p>FORMAT FOR OUR</p>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="event-box">
+              <div class="event-content">
+                <p>xxxx</p>
+                <p>WHY WE SHOULD</p>
+                <p>USE THE OPEN</p>
+                <p>DOCUMENT</p>
+                <p>FORMAT FOR OUR</p>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="event-box">
+              <div class="event-content">
+                <p>xxxx</p>
+                <p>WHY WE SHOULD</p>
+                <p>USE THE OPEN</p>
+                <p>DOCUMENT</p>
+                <p>FORMAT FOR OUR</p>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="event-box">
+              <div class="event-content">
+                <p>xxxx</p>
+                <p>WHY WE SHOULD</p>
+                <p>USE THE OPEN</p>
+                <p>DOCUMENT</p>
+                <p>FORMAT FOR OUR</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="times">
+        <div class="time">-14:00-</div>
+          <div class="event">
+            <div class="event-box">
+              <div class="event-content">
+                <p>xxxx</p>
+                <p>WHY WE SHOULD</p>
+                <p>USE THE OPEN</p>
+                <p>DOCUMENT</p>
+                <p>FORMAT FOR OUR</p>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="event-box">
+              <div class="event-content">
+                <p>xxxx</p>
+                <p>WHY WE SHOULD</p>
+                <p>USE THE OPEN</p>
+                <p>DOCUMENT</p>
+                <p>FORMAT FOR OUR</p>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="event-box">
+              <div class="event-content">
+                <p>xxxx</p>
+                <p>WHY WE SHOULD</p>
+                <p>USE THE OPEN</p>
+                <p>DOCUMENT</p>
+                <p>FORMAT FOR OUR</p>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="event-box">
+              <div class="event-content">
+                <p>xxxx</p>
+                <p>WHY WE SHOULD</p>
+                <p>USE THE OPEN</p>
+                <p>DOCUMENT</p>
+                <p>FORMAT FOR OUR</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="times">
+          <div class="time">-9:00-</div>
+          <div class="event">
+            <div class="event-box">
+              <div class="event-content">
+                <p>xxxx</p>
+                <p>WHY WE SHOULD</p>
+                <p>USE THE OPEN</p>
+                <p>DOCUMENT</p>
+                <p>FORMAT FOR OUR</p>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+<!--             <div class="event-box">
+              <div class="event-content">
+                <p>xxxx</p>
+                <p>WHY WE SHOULD</p>
+                <p>USE THE OPEN</p>
+                <p>DOCUMENT</p>
+                <p>FORMAT FOR OUR</p>
+              </div>
+            </div> -->
+          </div>
+          <div class="event">
+            <div class="event-box">
+              <div class="event-content">
+                <p>xxxx</p>
+                <p>WHY WE SHOULD</p>
+                <p>USE THE OPEN</p>
+                <p>DOCUMENT</p>
+                <p>FORMAT FOR OUR</p>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="event-box">
+              <div class="event-content">
+                <p>xxxx</p>
+                <p>WHY WE SHOULD</p>
+                <p>USE THE OPEN</p>
+                <p>DOCUMENT</p>
+                <p>FORMAT FOR OUR</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="times"></div>
+
+      </div>
     </div>
+  </div>
   </section>
 
   <section id="nav5">
@@ -509,8 +748,44 @@
       }
       
       if(st >= ($('#nav4').offset().top - $(window).height())){
-        // $("img.arrollado").css({"top": 0 - ((st - ($('#nav4').offset().top - $(window).height())) * 0.15) + "px"});
-        // $("#nav4 .copy").css({"top": 500 - ((st - ($('#nav4').offset().top - $(window).height())) * 0.4) + "px"});
+        //$("#nav4 .timeline").css({"top": $('#nav4').offset().top - st * 0.45 + "px"});
+      //   var b = true;
+      //   if(false){
+      //     b = false;
+          
+      //   }else{
+      //     $(".timeline").animate({top: $(".timeline").css("top").replace("px","")-1}, 800, 'easeInQuint');
+
+      //     var oDiv = document.getElementById('nav4');
+      //     oDiv.onmousewheel = fn;
+      //     if(oDiv.addEventListener){
+      //         oDiv.addEventListener('DOMMouseScroll', fn ,false);
+      //     }
+      //     function fn(ev){
+      //         //alert()
+      //         var ev = ev || event;
+      //         //alert(ev.wheelDelta);
+      //         //alert(ev.detail)
+              
+              
+      //         if(ev.wheelDelta){
+      //             b = ev.wheelDelta > 0 ? true : false
+      //         }else{
+      //             b = ev.detail <  0 ? true : false
+      //         }
+      //         //alert(b)
+      //         if(b){
+      //             this.style.height = this.offsetHeight - 10+'px';
+      //         }else{
+      //             this.style.height = this.offsetHeight + 10+'px';
+      //         }
+              
+      //         if(ev.preventDefault){
+      //             ev.preventDefault();
+      //         }
+      //         return false;
+      //     }
+      //   }
       }
       
       // if(st >= ($('#fotos').offset().top - $(window).height())){
@@ -524,7 +799,7 @@
       // }
       
       if(st >= ($('#nav5').offset().top - $(window).height())){
-        $("#nav5").css({"background-position-y": 0 - ((st - ($('#footer-bottom').offset().top - $(window).height())) * 0.3) + "px"});
+        $("#nav5").css({"background-position-y": 0 - ((st - ($('#footer-bottom').offset().top - $(window).height())) * 0.6) + "px"});
       }
       
       // if(st >= ($('#firma').offset().top - $(window).height())){

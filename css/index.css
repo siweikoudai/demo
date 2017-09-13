@@ -661,6 +661,16 @@ height:150px;
     align-items: center;
 }
 @media (max-width:640px){
+::-webkit-scrollbar {
+-webkit-appearance: none;       /*可去除系统默认的样式*/
+width: 7px;                           /*滚动条宽度*/
+}
+::-webkit-scrollbar-thumb {    /*当焦点不在当前区域滑块的状态*/
+border-radius: 4px;
+background-color: rgba(0,0,0,.5);
+-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
 .slide-home .wp{width:90%;height: 70%;}
 .slide-home .logo img{width: 100%}
 .slide-home .summit2017 img{width: 70%;margin-top: 10%;}
@@ -672,7 +682,70 @@ height:150px;
 .slide-about .content{width: 80%;font-size:17px;line-height: 1.5; }
 
 
+.slide-schedule .fixed{
+  width: 100%;
+  left: 0;
+  margin-left: 0;
+}
 .slide-schedule .time{
+  /*display: none;*/
+}
+
+.slide-schedule .rooms{
+    width: 87%;
+    height: 40px;
+    margin: 5px 0 0 10%;
+    top: 180px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.slide-schedule .room{
+    height: auto;
+    font-size: 24px;
+    width: 23%
+}
+.slide-schedule .container{width:100%;}
+.slide-schedule .content{width:100%;}
+.slide-schedule .timeline{width:100%;top: 240px;}
+.slide-schedule .times{
+    width: 87%;
+    height: 100%;
+    margin: 5px 0 0 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.slide-schedule .time{
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: -40px;
+    font-size: 13px
+}
+.slide-schedule .event{
+    width: 23%;
+    height: 150px;
+}
+.slide-schedule .event-box{
+    width: 100%;
+    height: 150px;
+}
+.slide-schedule .event-content{
+  font-size: 12px;
+  bottom: 5px;
+  right: 5px;
+}
+
+.slide-schedule .swiper-container-vertical>.swiper-pagination-bullets{left: 0;top: 20%;width: 100%;}
+.slide-schedule .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{display: inline-block;margin:20px;}
+
+
+/*.slide-schedule .time{
   display: none;
 }
 .slide-schedule .rooms{
@@ -685,27 +758,27 @@ height:150px;
     top: 100px;
 }
 .slide-schedule .times{
-    width: 400px;
+    width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     position: relative;
 }
 .slide-schedule .time{
-    width: 400px;
+    width: 200px;
     height: 50px;
     position: absolute;
     top: -40px;
 }
 .slide-schedule .event{
-    width: 400px;
-    height: 150px;
+    width: 200px;
+    height: 120px;
 }
 .slide-schedule .event-box{
-    width: 400px;
-    height: 150px;
+    width: 200px;
+    height: 120px;
 }
 .slide-schedule .event-content{
   font-size: 15px;
@@ -713,10 +786,10 @@ height:150px;
 
 
 
-.slide-schedule .swiper-container-vertical>.swiper-pagination-bullets{left: 0;top: 20%;width: 100%;}
-.slide-schedule .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{display: inline-block;margin:20px;}
+.slide-schedule .swiper-container-horizontal>.swiper-pagination-bullets{left: 0;top: 20%;width: 100%;}
+.slide-schedule .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{display: inline-block;margin:20px;}
 .slide-schedule .timeline{width: 90%;}
-
+*/
 
 
 

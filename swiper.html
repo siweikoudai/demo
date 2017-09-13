@@ -103,7 +103,149 @@ height:120px;
       <li class="nav-main" data-section="nav4"><em></em><span>04</span><a href="#nav4"><strong>nav4</strong></a></li>
       <li class="nav-main" data-section="nav5"><em></em><span>05</span><a href="#nav5"><strong>nav5</strong></a></li>
     </ul> -->
-  
+    <!--弹窗-->
+    <style>
+    .timeline{overflow: auto;}
+    .person-window{
+      display: none;
+      position: absolute;
+      width:100%;
+      height: 100%;
+      z-index: 99999;
+      background: rgba(255,255,255,0.3);
+    }
+    .person-container{
+      position: absolute;
+      width:250px;
+      top:50%;
+      left: 50%;
+      margin-left: -125px;
+      margin-top: -200px;
+      padding-bottom: 20px;
+      background: #FFFFFF;
+    }
+    .person-container .person-photo img{width: 100%}
+    .person-container .window-title-blur{
+      position: relative;
+      top: -25px;
+      height: 25px;
+      background: rgba(255,255,255,0.4);
+      -webkit-filter: blur(7px); /* Chrome, Opera */
+      -moz-filter: blur(7px);
+      -ms-filter: blur(7px);    
+      filter: blur(7px); 
+    }
+    .person-container .window-title{
+      position: relative;
+      top: -50px;
+      font-size: 15px;
+      line-height: 1.5;
+      font-family: 'SiYuanBoldcf7dd67ab26bb';
+      text-align: right;
+      word-break: break-word;
+    }
+    .person-container .window-content{
+      padding: 0px;
+    }
+    .person-container .window-name{
+      position: relative;
+      top: -40px;
+      font-size: 13px;
+      line-height: 1.5;
+      text-align: right;
+    }
+    .person-container .window-description{
+      position: relative;
+      top: -20px;
+      margin-left: 20px;
+    }
+    .person-container .window-description p{
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .logo-window{
+      position: absolute;
+      width:100%;
+      height: 100%;
+      z-index: 99999;
+      background: rgba(255,255,255,0.3);
+    }
+    .logo-container{
+      position: absolute;
+      width:500px;
+      top:50%;
+      left: 50%;
+      margin-left: -250px;
+      margin-top: -100px;
+      background: #FFFFFF;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .logo-container .logo-photo{
+      display: inline-block;
+      width:40%;
+      height: 100%;
+      vertical-align:middle;
+    }
+    .logo-container img{
+      height: 60px;
+      padding: 10px;
+      vertical-align:middle;
+    }
+    .logo-container span{
+      display:inline-block;
+      height: 100%;
+      vertical-align:middle;
+    }
+    .logo-description{
+      padding-left: 10px;
+      display: inline-block;
+      width: 55%;
+      border-left: 1px dashed #000000;
+      margin: 10px;
+      padding-left: 10px;
+    }
+    .logo-description p{
+      text-indent: 2rem;
+      margin-top: 5px;
+      line-height: 1.5;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+    }
+    </style>
+    <div class="person-window">
+      <div class="person-container">
+        <div class="person-photo"></div>
+        <img src="images/person.jpg">
+        <div class="window-title-blur"></div>
+        <div class="window-title">TITLE TITLE TITLE TITLE TITLE TITLE TITLE</div>
+        <div class="window-content">
+          <div class="window-name">ZHOUJUN PROFESSOR</div>
+          <div class="window-description">
+            <p>xxxx</p>
+            <p>WHY WE SHOULD</p>
+            <p>USE THE OPEN</p>
+            <p>DOCUMENT</p>
+            <p>FORMAT FOR OUR</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logo-window">
+      <div class="logo-container">
+        <div class="logo-photo">
+            <img src="images/contributor.png">
+        </div>
+        <div class="logo-description">
+          <p>WHY WE SHOULD USE THE OPEN FORMAT</p>
+          <p>WHY WE SHOULD USE THE OPEN FORMAT FOR OUR WHY WE SHOULD USE THE</p>
+        </div>
+      </div>
+    </div>
   <!--页面-->
     <div class="swiper-container" id="main">
         <div class="swiper-wrapper">
@@ -255,7 +397,7 @@ height:120px;
                                       <div class="body">
                                           <p>GNOME 3.24 Portland was released in March 2017 including features like a brand new Recipes app, Night Light, and revamped settings, as well as improvements to the browser, photos, and IRC applications. <a href="https://www.gnome.org/getting-gnome/">Get GNOME 3.24 here</a></p>
                                           <div class="embed-responsive embed-responsive-16by9">
-                                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_Z1PAXiyTB0"></iframe>
+                                              <a data-gallery="GNOME 3.0" data-toggle="lightbox" href="./images/gnome3.png"><img src="./images/gnome3.png" alt="GNOME Desktop with 3.0 version"></a>
                                           </div>
                                       </div>
                                   </div>
@@ -274,7 +416,7 @@ height:120px;
                                           </div>
                                           <div class="col-xs-12 thumbnail">
                                             <div class="embed-responsive embed-responsive-16by9">
-                                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/i_5qm4FE4KM"></iframe>
+                                              <a data-gallery="GNOME 3.0" data-toggle="lightbox" href="./images/gnome3.png"><img src="./images/gnome3.png" alt="GNOME Desktop with 3.0 version"></a>
                                             </div>
                                           </div>
                                       </div>
@@ -288,8 +430,10 @@ height:120px;
                                       </div>
                                   </div>
                                   <div class="entry">
-                                    <div class="margin"></div>
-                                    <div class="margin"></div>
+                                    <div class="body">
+                                      <div class="margin"></div>
+                                      <div class="margin"></div>
+                                    </div>
                                   </div>
                                 </div>
                                 
@@ -332,7 +476,7 @@ height:120px;
                   </div>
                   <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                          <div class="swiper-container swiper-container-vertical swiper-container-free-mode" id="schedule01">
+                          <div class="swiper-container swiper-container-free-mode" id="schedule01">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide swiper-slide-active">
                                 <div class="container wp">
@@ -494,7 +638,7 @@ height:120px;
                       </div>
 
                       <div class="swiper-slide">
-                        <div class="swiper-container swiper-container-vertical swiper-container-free-mode" id="schedule02">
+                        <div class="swiper-container swiper-container-free-mode" id="schedule02">
                           <div class="swiper-wrapper">
                             <div class="swiper-slide">
                               <div class="container wp">
@@ -656,7 +800,7 @@ height:120px;
                       </div>
 
                       <div class="swiper-slide">
-                        <div class="swiper-container swiper-container-vertical swiper-container-free-mode" id="schedule03">
+                        <div class="swiper-container swiper-container-free-mode" id="schedule03">
                           <div class="swiper-wrapper">
                             <div class="swiper-slide swiper-slide-active">
                               <div class="container wp">
@@ -1023,7 +1167,12 @@ height:120px;
           }(),
           language:(navigator.browserLanguage || navigator.language).toLowerCase()
       }
-
+      $(".person-window").click(function(){
+        $(this).hide();
+      });
+      $(".logo-window").click(function(){
+        $(this).hide();
+      });
       $(".ani").each(function(index,ele){
         if($(this).hasClass("randomEffect")){
           var randomEffects = ["fadeInUp","fadeInDown","fadeInLeft","fadeInRight"];
@@ -1037,13 +1186,29 @@ height:120px;
 
       if(browser.versions.mobile){
         scheduleSwiperDirection="horizontal";
+        //scheduleSwiperDirection="vertical";
+        // var scrollStartPos=[];
+        // $(".timeline").each(function(index,ele){
+        //   scrollStartPos[index] = 0;
+        //   $(this).on("touchstart",function(event) {
+        //     scrollStartPos[index] = this.scrollTop + event.touches[0].pageY;
+        //     event.preventDefault();
+        //   },false);
+        //   $(this).on("touchmove",function(event) {
+        //     this.scrollTop = scrollStartPos[index] - event.touches[0].pageY;
+        //     event.preventDefault();
+        //   },false);
+        // });
+
         transitionSpeed=500;
+        $(".margin").css("height",$(window).height()-214);
       }else{
         scheduleSwiperDirection="vertical";
         transitionSpeed=1000;
+        $(".margin").css("height",$(window).height()-414);
       }
 
-      $(".margin").css("height",$(window).height()-414);
+
       var mainSwiper = new Swiper('#main', {
           direction: 'vertical',
           speed:transitionSpeed,
@@ -1142,8 +1307,8 @@ height:120px;
               mainSwiper.enableMousewheelControl();
               beforeTranslate = -1;
             }
-            if(slideHeight-swiperHeight+nowTranslate<142 && nowTranslate < beforeTranslate){//当前到底
-              scheduleSwiper.slideTo(3);
+            if(slideHeight-swiperHeight+nowTranslate<182 && nowTranslate < beforeTranslate){//当前到底
+              mainSwiper.slideTo(3);
               $("#timeline01 .swiper-wrapper").css("transform","matrix(1, 0, 0, 1, 0, 0)");
               beforeTranslate = 1;
             }else{
@@ -1213,7 +1378,7 @@ height:120px;
       // });
 
       var scheduleSwiper = new Swiper('#schedule', {
-          direction: scheduleSwiperDirection,
+          direction: 'vertical',
           speed:transitionSpeed,
           pagination: '.swiper-pagination-schedule',
           paginationClickable: true,
@@ -1237,156 +1402,315 @@ height:120px;
           }
       });
 
-      var schedule01Swiper = new Swiper('#schedule01',{
-          scrollbar: '.swiper-scrollbar',
-          direction: scheduleSwiperDirection,
-          speed:transitionSpeed,
-          slidesPerView: 'auto',
-          freeMode: true,
-          freeModeMomentum : false,
-          mousewheelControl: true,
-          mousewheelSensitivity : 0.775,
-          roundLengths : true,
-          onSetTransition: function(swiper,translate){
-            //父级锁定&解锁
-            if(scheduleSwiper.activeIndex==0){
-              scheduleSwiper.params.onlyExternal=true;
-              scheduleSwiper.disableMousewheelControl();
-            }else{
-              scheduleSwiper.params.onlyExternal=false;
-              scheduleSwiper.enableMousewheelControl();
-            }
+      // if(browser.versions.mobile){
+      //   scheduleSwiperDirection="horizontal";
+      //   transitionSpeed=500;
+      //   var schedule01Swiper = new Swiper('#schedule01',{
+      //       scrollbar: '.swiper-scrollbar',
+      //       direction: scheduleSwiperDirection,
+      //       speed:transitionSpeed,
+      //       slidesPerView: 'auto',
+      //       freeMode: true,
+      //       freeModeMomentum : false,
+      //       mousewheelControl: true,
+      //       mousewheelSensitivity : 0.775,
+      //       roundLengths : true,
+      //       onSetTransition: function(swiper,translate){
+      //         //父级锁定&解锁
+      //         if(scheduleSwiper.activeIndex==0){
+      //           scheduleSwiper.params.onlyExternal=true;
+      //           scheduleSwiper.disableMousewheelControl();
+      //         }else{
+      //           scheduleSwiper.params.onlyExternal=false;
+      //           scheduleSwiper.enableMousewheelControl();
+      //         }
 
-            //translate 一直为0，不可直接用
-            nowTranslate=swiper.translate;
-            if(typeof(beforeTranslate)=="undefined"){
-              beforeTranslate=0;
-            };
-            slideHeight=swiper.slides[0].scrollHeight;
-            swiperHeight=swiper.height;
-            if(nowTranslate>-2 && nowTranslate > beforeTranslate){//当前到顶
-              mainSwiper.slideTo(2);
-              mainSwiper.params.onlyExternal=false;
-              mainSwiper.enableMousewheelControl();
-              beforeTranslate = -1;
-            }
-            if(slideHeight-swiperHeight+nowTranslate<2 && nowTranslate < beforeTranslate){//当前到底
-              scheduleSwiper.slideTo(1);
-              $("#schedule01 .swiper-wrapper").css("transform","matrix(1, 0, 0, 1, 0, 0)");
-              beforeTranslate = 1;
-            }else{
-              beforeTranslate=nowTranslate;
-            }
-          },
-           onReachBeginning:function(swiper){
-            if(swiper.translate>0){
-              scheduleSwiper.slideTo(0);
-            }
-             if(swiper.translate<(swiper.height-swiper.slides[0].scrollHeight)){
-              scheduleSwiper.slideTo(1);
-            }
-           }
-          });
+      //         //translate 一直为0，不可直接用
+      //         nowTranslate=swiper.translate;
+      //         if(typeof(beforeTranslate)=="undefined"){
+      //           beforeTranslate=0;
+      //         };
+      //         slideWidth=swiper.slides[0].scrollWidth;
+      //         swiperWidth=swiper.width;
+      //         if(nowTranslate>-2 && nowTranslate > beforeTranslate){//当前到顶
+      //           mainSwiper.slideTo(2);
+      //           mainSwiper.params.onlyExternal=false;
+      //           mainSwiper.enableMousewheelControl();
+      //           beforeTranslate = -1;
+      //         }
+      //         if(slideWidth-swiperWidth+nowTranslate<2 && nowTranslate < beforeTranslate){//当前到底
+      //           scheduleSwiper.slideTo(1);
+      //           $("#schedule01 .swiper-wrapper").css("transform","matrix(1, 0, 0, 1, 0, 0)");
+      //           beforeTranslate = 1;
+      //         }else{
+      //           beforeTranslate=nowTranslate;
+      //         }
+      //       },
+      //        onReachBeginning:function(swiper){
+      //         if(swiper.translate>0){
+      //           scheduleSwiper.slideTo(0);
+      //         }
+      //          if(swiper.translate<(swiper.width-swiper.slides[0].scrollWidth)){
+      //           scheduleSwiper.slideTo(1);
+      //         }
+      //        }
+      //       });
 
-      var schedule02Swiper = new Swiper('#schedule02',{
-          scrollbar: '.swiper-scrollbar',
-          direction: scheduleSwiperDirection,
-          speed:transitionSpeed,
-          slidesPerView: 'auto',
-          freeMode: true,
-          freeModeMomentum : false,
-          mousewheelControl: true,
-          mousewheelSensitivity : 0.775,
-          roundLengths : true,
-          onSetTransition: function(swiper,translate){
-            //父级    
-            if(scheduleSwiper.activeIndex==1){
-              scheduleSwiper.params.onlyExternal=true;
-              scheduleSwiper.disableMousewheelControl();
-            }else{
-              scheduleSwiper.params.onlyExternal=false;
-              scheduleSwiper.enableMousewheelControl();
-            }
+      //   var schedule02Swiper = new Swiper('#schedule02',{
+      //       scrollbar: '.swiper-scrollbar',
+      //       direction: scheduleSwiperDirection,
+      //       speed:transitionSpeed,
+      //       slidesPerView: 'auto',
+      //       freeMode: true,
+      //       freeModeMomentum : false,
+      //       mousewheelControl: true,
+      //       mousewheelSensitivity : 0.775,
+      //       roundLengths : true,
+      //       onSetTransition: function(swiper,translate){
+      //         //父级    
+      //         if(scheduleSwiper.activeIndex==1){
+      //           scheduleSwiper.params.onlyExternal=true;
+      //           scheduleSwiper.disableMousewheelControl();
+      //         }else{
+      //           scheduleSwiper.params.onlyExternal=false;
+      //           scheduleSwiper.enableMousewheelControl();
+      //         }
 
-            //translate 一直为0，不可直接用
-            nowTranslate=swiper.translate;
-            if(typeof(beforeTranslate)=="undefined"){
-              beforeTranslate=0
-            };
-            slideHeight=swiper.slides[0].scrollHeight;
-            swiperHeight=swiper.height;
-            if(nowTranslate>-2 && nowTranslate > beforeTranslate){
-              scheduleSwiper.slideTo(0);
-              beforeTranslate = -1;
-            }
-            if(slideHeight-swiperHeight+nowTranslate<2 && nowTranslate < beforeTranslate){
-              scheduleSwiper.slideTo(2);
-              $("#schedule02 .swiper-wrapper").css("transform","matrix(1, 0, 0, 1, 0, 0)")
-              beforeTranslate=1;
-            }else{
-              beforeTranslate=nowTranslate;
-            }
-          },
-           onReachBeginning:function(swiper){
-             if(swiper.translate>0){
-              scheduleSwiper.slideTo(1);
-            }
-             if(swiper.translate<(swiper.height-swiper.slides[0].scrollHeight)){
-              scheduleSwiper.slideTo(2);
-            }
-           }
-          });
+      //         //translate 一直为0，不可直接用
+      //         nowTranslate=swiper.translate;
+      //         if(typeof(beforeTranslate)=="undefined"){
+      //           beforeTranslate=0
+      //         };
+      //         slideWidth=swiper.slides[0].scrollWidth;
+      //         swiperWidth=swiper.width;
+      //         if(nowTranslate>-2 && nowTranslate > beforeTranslate){
+      //           scheduleSwiper.slideTo(0);
+      //           beforeTranslate = -1;
+      //         }
+      //         if(slideWidth-swiperWidth+nowTranslate<2 && nowTranslate < beforeTranslate){
+      //           scheduleSwiper.slideTo(2);
+      //           $("#schedule02 .swiper-wrapper").css("transform","matrix(1, 0, 0, 1, 0, 0)")
+      //           beforeTranslate=1;
+      //         }else{
+      //           beforeTranslate=nowTranslate;
+      //         }
+      //       },
+      //        onReachBeginning:function(swiper){
+      //          if(swiper.translate>0){
+      //           scheduleSwiper.slideTo(1);
+      //         }
+      //          if(swiper.translate<(swiper.width-swiper.slides[0].scrollWidth)){
+      //           scheduleSwiper.slideTo(2);
+      //         }
+      //        }
+      //       });
 
-      var schedule03Swiper = new Swiper('#schedule03',{
-          scrollbar: '.swiper-scrollbar',
-          direction: scheduleSwiperDirection,
-          speed:transitionSpeed,
-          slidesPerView: 'auto',
-          freeMode: true,
-          freeModeMomentum : false,
-          mousewheelControl: true,
-          mousewheelSensitivity : 0.775,
-          roundLengths : true,
-          onSetTransition: function(swiper,translate){
-            //父级    
-            if(scheduleSwiper.activeIndex==2){
-              scheduleSwiper.params.onlyExternal=true;
-              scheduleSwiper.disableMousewheelControl();
-            }else{
-              scheduleSwiper.params.onlyExternal=false;
-              scheduleSwiper.enableMousewheelControl();
-            }
+      //   var schedule03Swiper = new Swiper('#schedule03',{
+      //       scrollbar: '.swiper-scrollbar',
+      //       direction: scheduleSwiperDirection,
+      //       speed:transitionSpeed,
+      //       slidesPerView: 'auto',
+      //       freeMode: true,
+      //       freeModeMomentum : false,
+      //       mousewheelControl: true,
+      //       mousewheelSensitivity : 0.775,
+      //       roundLengths : true,
+      //       onSetTransition: function(swiper,translate){
+      //         //父级    
+      //         if(scheduleSwiper.activeIndex==2){
+      //           scheduleSwiper.params.onlyExternal=true;
+      //           scheduleSwiper.disableMousewheelControl();
+      //         }else{
+      //           scheduleSwiper.params.onlyExternal=false;
+      //           scheduleSwiper.enableMousewheelControl();
+      //         }
 
-            //translate 一直为0，不可直接用
-            nowTranslate=swiper.translate;
-            if(typeof(beforeTranslate)=="undefined"){
-              beforeTranslate=0
-            };
-            slideHeight=swiper.slides[0].scrollHeight;
-            swiperHeight=swiper.height;
-            if(nowTranslate>-2 && nowTranslate > beforeTranslate){
-              scheduleSwiper.slideTo(1);
-              beforeTranslate = -1;
+      //         //translate 一直为0，不可直接用
+      //         nowTranslate=swiper.translate;
+      //         if(typeof(beforeTranslate)=="undefined"){
+      //           beforeTranslate=0
+      //         };
+      //         slideWidth=swiper.slides[0].scrollWidth;
+      //         swiperWidth=swiper.width;
+      //         if(nowTranslate>-2 && nowTranslate > beforeTranslate){
+      //           scheduleSwiper.slideTo(1);
+      //           beforeTranslate = -1;
+      //         }
+      //         if(slideWidth-swiperWidth+nowTranslate<2 && nowTranslate < beforeTranslate){
+      //           mainSwiper.slideTo(4);
+      //           mainSwiper.params.onlyExternal=false;
+      //           mainSwiper.enableMousewheelControl();
+      //           $("#schedule03 .swiper-wrapper").css("transform","matrix(1, 0, 0, 1, 0, 0)")
+      //           beforeTranslate = 1;
+      //         }else{
+      //           beforeTranslate=nowTranslate;
+      //         }
+      //       },
+      //        onReachBeginning:function(swiper){
+      //          if(swiper.translate>0){
+      //           scheduleSwiper.slideTo(1);
+      //         }
+      //          if(swiper.translate<(swiper.width-swiper.slides[0].scrollWidth)){
+      //           mainSwiper.slideTo(4);
+      //         }
+      //       }
+      //   });
+      // }else{
+      //   scheduleSwiperDirection="vertical";
+      //   transitionSpeed=1000;
+      //pc schedule swiper
+        var schedule01Swiper = new Swiper('#schedule01',{
+            scrollbar: '.swiper-scrollbar',
+            direction: 'vertical',
+            speed:transitionSpeed,
+            slidesPerView: 'auto',
+            freeMode: true,
+            freeModeMomentum : false,
+            mousewheelControl: true,
+            mousewheelSensitivity : 0.775,
+            roundLengths : true,
+            onSetTransition: function(swiper,translate){
+              //父级锁定&解锁
+              if(scheduleSwiper.activeIndex==0){
+                scheduleSwiper.params.onlyExternal=true;
+                scheduleSwiper.disableMousewheelControl();
+              }else{
+                scheduleSwiper.params.onlyExternal=false;
+                scheduleSwiper.enableMousewheelControl();
+              }
+
+              //translate 一直为0，不可直接用
+              nowTranslate=swiper.translate;
+              if(typeof(beforeTranslate)=="undefined"){
+                beforeTranslate=0;
+              };
+              slideHeight=swiper.slides[0].scrollHeight;
+              swiperHeight=swiper.height;
+              if(nowTranslate>-2 && nowTranslate > beforeTranslate){//当前到顶
+                mainSwiper.slideTo(2);
+                mainSwiper.params.onlyExternal=false;
+                mainSwiper.enableMousewheelControl();
+                beforeTranslate = -1;
+              }
+              if(slideHeight-swiperHeight+nowTranslate<2 && nowTranslate < beforeTranslate){//当前到底
+                scheduleSwiper.slideTo(1);
+                $("#schedule01 .swiper-wrapper").css("transform","matrix(1, 0, 0, 1, 0, 0)");
+                beforeTranslate = 1;
+              }else{
+                beforeTranslate=nowTranslate;
+              }
+            },
+             onReachBeginning:function(swiper){
+              if(swiper.translate>0){
+                scheduleSwiper.slideTo(0);
+              }
+               if(swiper.translate<(swiper.height-swiper.slides[0].scrollHeight)){
+                scheduleSwiper.slideTo(1);
+              }
+             }
+            });
+
+        var schedule02Swiper = new Swiper('#schedule02',{
+            scrollbar: '.swiper-scrollbar',
+            direction: 'vertical',
+            speed:transitionSpeed,
+            slidesPerView: 'auto',
+            freeMode: true,
+            freeModeMomentum : false,
+            mousewheelControl: true,
+            mousewheelSensitivity : 0.775,
+            roundLengths : true,
+            onSetTransition: function(swiper,translate){
+              //父级    
+              if(scheduleSwiper.activeIndex==1){
+                scheduleSwiper.params.onlyExternal=true;
+                scheduleSwiper.disableMousewheelControl();
+              }else{
+                scheduleSwiper.params.onlyExternal=false;
+                scheduleSwiper.enableMousewheelControl();
+              }
+
+              //translate 一直为0，不可直接用
+              nowTranslate=swiper.translate;
+              if(typeof(beforeTranslate)=="undefined"){
+                beforeTranslate=0
+              };
+              slideHeight=swiper.slides[0].scrollHeight;
+              swiperHeight=swiper.height;
+              if(nowTranslate>-2 && nowTranslate > beforeTranslate){
+                scheduleSwiper.slideTo(0);
+                beforeTranslate = -1;
+              }
+              if(slideHeight-swiperHeight+nowTranslate<2 && nowTranslate < beforeTranslate){
+                scheduleSwiper.slideTo(2);
+                $("#schedule02 .swiper-wrapper").css("transform","matrix(1, 0, 0, 1, 0, 0)")
+                beforeTranslate=1;
+              }else{
+                beforeTranslate=nowTranslate;
+              }
+            },
+             onReachBeginning:function(swiper){
+               if(swiper.translate>0){
+                scheduleSwiper.slideTo(1);
+              }
+               if(swiper.translate<(swiper.height-swiper.slides[0].scrollHeight)){
+                scheduleSwiper.slideTo(2);
+              }
+             }
+            });
+
+        var schedule03Swiper = new Swiper('#schedule03',{
+            scrollbar: '.swiper-scrollbar',
+            direction: 'vertical',
+            speed:transitionSpeed,
+            slidesPerView: 'auto',
+            freeMode: true,
+            freeModeMomentum : false,
+            mousewheelControl: true,
+            mousewheelSensitivity : 0.775,
+            roundLengths : true,
+            onSetTransition: function(swiper,translate){
+              //父级    
+              if(scheduleSwiper.activeIndex==2){
+                scheduleSwiper.params.onlyExternal=true;
+                scheduleSwiper.disableMousewheelControl();
+              }else{
+                scheduleSwiper.params.onlyExternal=false;
+                scheduleSwiper.enableMousewheelControl();
+              }
+
+              //translate 一直为0，不可直接用
+              nowTranslate=swiper.translate;
+              if(typeof(beforeTranslate)=="undefined"){
+                beforeTranslate=0
+              };
+              slideHeight=swiper.slides[0].scrollHeight;
+              swiperHeight=swiper.height;
+              if(nowTranslate>-2 && nowTranslate > beforeTranslate){
+                scheduleSwiper.slideTo(1);
+                beforeTranslate = -1;
+              }
+              if(slideHeight-swiperHeight+nowTranslate<2 && nowTranslate < beforeTranslate){
+                mainSwiper.slideTo(4);
+                mainSwiper.params.onlyExternal=false;
+                mainSwiper.enableMousewheelControl();
+                $("#schedule03 .swiper-wrapper").css("transform","matrix(1, 0, 0, 1, 0, 0)")
+                beforeTranslate = 1;
+              }else{
+                beforeTranslate=nowTranslate;
+              }
+            },
+             onReachBeginning:function(swiper){
+               if(swiper.translate>0){
+                scheduleSwiper.slideTo(1);
+              }
+               if(swiper.translate<(swiper.height-swiper.slides[0].scrollHeight)){
+                mainSwiper.slideTo(4);
+              }
             }
-            if(slideHeight-swiperHeight+nowTranslate<2 && nowTranslate < beforeTranslate){
-              mainSwiper.slideTo(4);
-              mainSwiper.params.onlyExternal=false;
-              mainSwiper.enableMousewheelControl();
-              $("#schedule03 .swiper-wrapper").css("transform","matrix(1, 0, 0, 1, 0, 0)")
-              beforeTranslate = 1;
-            }else{
-              beforeTranslate=nowTranslate;
-            }
-          },
-           onReachBeginning:function(swiper){
-             if(swiper.translate>0){
-              scheduleSwiper.slideTo(1);
-            }
-             if(swiper.translate<(swiper.height-swiper.slides[0].scrollHeight)){
-              mainSwiper.slideTo(4);
-            }
-           }
-          });
+        });
+      //else end
+  //    }
 
       var transportSwiper = new Swiper('#transport', {
           direction: 'horizontal',

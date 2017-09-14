@@ -15,44 +15,15 @@
 
 
 <link href="css/reset.css" rel="stylesheet">
-<link href="css/index.css" rel="stylesheet">
 <link href="css/swiper.min.css" rel="stylesheet">
 <link href="css/animate.min.css" rel="stylesheet">
 <link href="css/timeline.css" rel="stylesheet">
-
 <link href="css/fonts.css" rel="stylesheet">
 <link href='https://cdn.webfont.youziku.com/webfonts/nomal/9915/46865/59aec6f4f629d817249cd13a.css' rel='stylesheet' type='text/css' />
 <link href='https://cdn.webfont.youziku.com/webfonts/nomal/9915/46870/59aec767f629d817249cd13c.css' rel='stylesheet' type='text/css' />
 <link href='https://cdn.webfont.youziku.com/webfonts/nomal/9915/46828/59aec5a9f629d817249cd138.css' rel='stylesheet' type='text/css' />
-<style>
-.swiper-container {
-        width: 100%;
-        height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-}
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
-#main .slide-footer{
-height:120px;
-}
+<link href="css/index.css" rel="stylesheet">
 
-</style>
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/jquery-ui.js"></script>
@@ -89,9 +60,9 @@ height:120px;
             <li class="nav3" data-link="nav3"><span>03</span><a href="#">TIMELINE</a></li>
             <li class="nav4" data-link="nav4"><span>04</span><a href="#">SCHEDULE</a></li>
             <li class="nav5" data-link="nav5"><span>05</span><a href="#">TRANSPORT</a></li>
-            <li class="nav6" data-link="nav6"><span>01</span><a href="#">SPONSORS</a></li>
-            <li class="nav7" data-link="nav7"><span>02</span><a href="#">CONTRUBUTORS</a></li>
-            <li class="nav8" data-link="nav8"><span>03</span><a href="#">STAFF</a></li>
+            <li class="nav6" data-link="nav6"><span>06</span><a href="#">SPONSORS</a></li>
+            <li class="nav7" data-link="nav7"><span>07</span><a href="#">CONTRUBUTORS</a></li>
+            <li class="nav8" data-link="nav8"><span>08</span><a href="#">STAFF</a></li>
           </ul>
         </nav>
     </header>
@@ -104,123 +75,11 @@ height:120px;
       <li class="nav-main" data-section="nav5"><em></em><span>05</span><a href="#nav5"><strong>nav5</strong></a></li>
     </ul> -->
     <!--弹窗-->
-    <style>
-    .timeline{overflow: auto;}
-    .person-window{
-      display: none;
-      position: absolute;
-      width:100%;
-      height: 100%;
-      z-index: 99999;
-      background: rgba(255,255,255,0.3);
-    }
-    .person-container{
-      position: absolute;
-      width:250px;
-      top:50%;
-      left: 50%;
-      margin-left: -125px;
-      margin-top: -200px;
-      padding-bottom: 20px;
-      background: #FFFFFF;
-    }
-    .person-container .person-photo img{width: 100%}
-    .person-container .window-title-blur{
-      position: relative;
-      top: -25px;
-      height: 25px;
-      background: rgba(255,255,255,0.4);
-      -webkit-filter: blur(7px); /* Chrome, Opera */
-      -moz-filter: blur(7px);
-      -ms-filter: blur(7px);    
-      filter: blur(7px); 
-    }
-    .person-container .window-title{
-      position: relative;
-      top: -50px;
-      font-size: 15px;
-      line-height: 1.5;
-      font-family: 'SiYuanBoldcf7dd67ab26bb';
-      text-align: right;
-      word-break: break-word;
-    }
-    .person-container .window-content{
-      padding: 0px;
-    }
-    .person-container .window-name{
-      position: relative;
-      top: -40px;
-      font-size: 13px;
-      line-height: 1.5;
-      text-align: right;
-    }
-    .person-container .window-description{
-      position: relative;
-      top: -20px;
-      margin-left: 20px;
-    }
-    .person-container .window-description p{
-      font-size: 12px;
-      line-height: 1.4;
-    }
-
-    .logo-window{
-      position: absolute;
-      width:100%;
-      height: 100%;
-      z-index: 99999;
-      background: rgba(255,255,255,0.3);
-    }
-    .logo-container{
-      position: absolute;
-      width:500px;
-      top:50%;
-      left: 50%;
-      margin-left: -250px;
-      margin-top: -100px;
-      background: #FFFFFF;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-    .logo-container .logo-photo{
-      display: inline-block;
-      width:40%;
-      height: 100%;
-      vertical-align:middle;
-    }
-    .logo-container img{
-      height: 60px;
-      padding: 10px;
-      vertical-align:middle;
-    }
-    .logo-container span{
-      display:inline-block;
-      height: 100%;
-      vertical-align:middle;
-    }
-    .logo-description{
-      padding-left: 10px;
-      display: inline-block;
-      width: 55%;
-      border-left: 1px dashed #000000;
-      margin: 10px;
-      padding-left: 10px;
-    }
-    .logo-description p{
-      text-indent: 2rem;
-      margin-top: 5px;
-      line-height: 1.5;
-      -moz-hyphens: auto;
-      -ms-hyphens: auto;
-      -webkit-hyphens: auto;
-      hyphens: auto;
-    }
-    </style>
     <div class="person-window">
       <div class="person-container">
-        <div class="person-photo"></div>
-        <img src="images/person.jpg">
+        <div class="person-photo">
+        	<img src="images/person.jpg">
+        </div>
         <div class="window-title-blur"></div>
         <div class="window-title">TITLE TITLE TITLE TITLE TITLE TITLE TITLE</div>
         <div class="window-content">
@@ -1130,10 +989,66 @@ height:120px;
                       <p>LILEI</p>
                     </div>
 
+                </div>
+              </div>
+            </div>
+                        <div class="swiper-slide slide-staff">
+              <div class="container wp">
+                <div class="title"><img src="images/staff.png"/></div>
+                <div class="content">
+                    <div class="staff-box">
+                    <div class="staff-title">DESIGN</div>
+                      <p>ZHANGXIAOMNG</p>
+                      <p>LIXIAOHUA</p>
+                      <p>HANMEIMEI</p>
+                      <p>LILEI</p>
+                    </div>
+                    
+                    <div class="staff-box">
+                    <div class="staff-title">DESIGN</div>
+                      <p>ZHANGXIAOMNG</p>
+                      <p>LIXIAOHUA</p>
+                      <p>HANMEIMEI</p>
+                      <p>LILEI</p>
+                    </div>
+
+                    <div class="staff-box">
+                    <div class="staff-title">DESIGN</div>
+                      <p>ZHANGXIAOMNG</p>
+                      <p>LIXIAOHUA</p>
+                      <p>HANMEIMEI</p>
+                      <p>LILEI</p>
+                    </div>
+
+                    <div class="staff-box">
+                    <div class="staff-title">DESIGN</div>
+                      <p>ZHANGXIAOMNG</p>
+                      <p>LIXIAOHUA</p>
+                      <p>HANMEIMEI</p>
+                      <p>LILEI</p>
+                    </div>
+
+                    <div class="staff-box">
+                    <div class="staff-title">DESIGN</div>
+                      <p>ZHANGXIAOMNG</p>
+                      <p>LIXIAOHUA</p>
+                      <p>HANMEIMEI</p>
+                      <p>LILEI</p>
+                    </div>
+
+                    <div class="staff-box">
+                    <div class="staff-title">DESIGN</div>
+                      <p>ZHANGXIAOMNG</p>
+                      <p>LIXIAOHUA</p>
+                      <p>HANMEIMEI</p>
+                      <p>LILEI</p>
+                    </div>
 
                 </div>
               </div>
             </div>
+
+
             <div class="swiper-slide slide-footer">
               <footer>
               <p>© 2017 GNOME（TM）.ASIA</p>

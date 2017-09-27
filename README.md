@@ -1,2 +1,2 @@
-# demo
-first demo
+# gnome.homepage
+gnome.homepage

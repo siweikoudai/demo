@@ -34,9 +34,9 @@ nav li.view span{opacity:0.1;}
 nav li.active > span{opacity:0.25}
 nav li.active > a{color:#000000}
 
-#navScroll{height:calc(100% - 10px);position:fixed;color:#FFF;z-index:98;/*top:74px*/}
+#navScroll{height:calc(100% - 74px);position:fixed;color:#FFF;z-index:98;/*top:74px*/}
 #navScroll i{width:50px;height:100%;position:absolute;z-index:0;border-right:1px solid rgba(255,255,255,0.3)}
-#navScroll li{max-height:150px;min-height:30px;position:relative;padding-left:50px;margin-top:15px;height:8%}
+#navScroll li{max-height:150px;min-height:30px;position:relative;padding-left:50px;margin-top:15px;height:10%}
 #navScroll li:first-child{margin-top:0;}
 #navScroll li a{padding:10px;left:49px;top:0;font-size:1.4em;display:block;height:100%;padding-left:3px;position:absolute;border-left:1px solid rgba(255,255,255,0.8)}
 #navScroll li a strong{font-weight:normal;position:absolute;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);opacity:0;transition:all ease-out 0.3s;-webkit-transition:all ease-out 0.3s}

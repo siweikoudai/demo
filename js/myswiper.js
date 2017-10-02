@@ -176,8 +176,8 @@ function setEventContentHeight(){
     var maxEventBoxHeight=0;
     var that = $(this);
     that.find(".event-box").each(function(index,ele){
-      if($(this).height()>maxEventBoxHeight){
-        maxEventBoxHeight=$(this).height();
+      if($(this).find(".event-content").height()>maxEventBoxHeight){
+        maxEventBoxHeight=$(this).find(".event-content").height();
       }
       if(index==that.find(".event-box").length-1){
         that.find(".event-box").height(maxEventBoxHeight+5);
@@ -203,6 +203,7 @@ var scheduleSwiper = new Swiper('#schedule', {
     },
     onSetTransition: function(swiper,translate){
       //父级锁定&解锁
+      setEventContentHeight();
       if(mainSwiper.activeIndex==2){
         mainSwiper.params.onlyExternal=true;
         mainSwiper.disableMousewheelControl();

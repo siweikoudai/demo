@@ -152,19 +152,19 @@ function creatMap4(){
   });
   map.setStatus({scrollWheel:false})
 }
-function setEventContentHeight(){
-  $(".slide-schedule .times").each(function(index,ele){
-    var maxEventBoxHeight=0;
-    var that = $(this);
-    if(index=="20"){
-      console.log("20");
-    }
-    that.find(".event-box").each(function(index,ele){
-      if($(this).height()>maxEventBoxHeight){
-        maxEventBoxHeight=$(this).height();
-      }else{
-        that.find(".event-box").height(maxEventBoxHeight);
-      }
-    });
-  });
-}
+// function setEventContentHeight(){
+//   $(".slide-schedule .times").each(function(index,ele){
+//     var maxEventBoxHeight=0;
+//     var that = $(this);
+//     if(index=="20"){
+//       console.log("20");
+//     }
+//     that.find(".event-box").each(function(index,ele){
+//       if($(this).find(".event-content").height()>maxEventBoxHeight){
+//         maxEventBoxHeight=$(this).height();
+//       }else{
+//         that.find(".event-box").height(maxEventBoxHeight);
+//       }
+//     });
+//   });
+// }

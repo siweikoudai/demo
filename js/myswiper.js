@@ -57,6 +57,10 @@ var mainSwiper = new Swiper('#main', {
     parallax: true,
     mousewheelControl: true,
     roundLengths : true,
+    keyboardControl: true,
+    onKeyPress: function(swiper, event){
+    //alert('你按了键盘'+event);
+    },
     onInit: function(swiper){
       swiperAnimateCache(swiper);  
       swiperAnimate(swiper);
@@ -80,15 +84,16 @@ var mainSwiper = new Swiper('#main', {
         swiper.params.onlyExternal=false;
         swiper.enableMousewheelControl();
       }
-      if(swiper.activeIndex==3 && $("#cqu_map").attr("src")==""){
+      if(swiper.activeIndex==3 && $("#cqu_map").html()==""){
+      //if(swiper.activeIndex==3 && $("#cqu_map").attr("src")==""){
         //<iframe id="cqu_map" class="map" src="" width="100%" height="100%" frameborder="0" scrolling="no" style="border:0" allowfullscreen></iframe>
-        $("#cqu_map").attr("src","https://gaode.com/search?id=B0017822WN&city=500106&geoobj=106.45715%7C29.554432%7C106.462917%7C29.557242&query_type=IDQ&query=%E9%87%8D%E5%BA%86%E5%A4%A7%E5%AD%A6%E4%B8%BB%E6%95%99%E5%AD%A6%E6%A5%BC&zoom=18");
-        //creatMap1();
+        //$("#cqu_map").attr("src","https://gaode.com/search?id=B0017822WN&city=500106&geoobj=106.45715%7C29.554432%7C106.462917%7C29.557242&query_type=IDQ&query=%E9%87%8D%E5%BA%86%E5%A4%A7%E5%AD%A6%E4%B8%BB%E6%95%99%E5%AD%A6%E6%A5%BC&zoom=18");
+        creatMap1();
       }
-//    setTimeout('timeline01Swiper.setWrapperTranslate(-10)',1500);
-      schedule01Swiper.setWrapperTranslate(-10);
-      schedule02Swiper.setWrapperTranslate(-10);
-      //schedule03Swiper.setWrapperTranslate(-10);
+//    setTimeout('timeline01Swiper.setWrapperTranslate(-40)',1500);
+      schedule01Swiper.setWrapperTranslate(-40);
+      schedule02Swiper.setWrapperTranslate(-40);
+      schedule03Swiper.setWrapperTranslate(-40);
     }
 });
 
@@ -108,10 +113,10 @@ var mainSwiper = new Swiper('#main', {
 //         mainSwiper.params.onlyExternal=false;
 //         mainSwiper.enableMousewheelControl();
 //       }
-//       //timelineSwiper.setWrapperTranslate(-10);
-//       schedule01Swiper.setWrapperTranslate(-10);
-//       schedule02Swiper.setWrapperTranslate(-10);
-//       //schedule03Swiper.setWrapperTranslate(-10);
+//       //timelineSwiper.setWrapperTranslate(-40);
+//       schedule01Swiper.setWrapperTranslate(-40);
+//       schedule02Swiper.setWrapperTranslate(-40);
+//       //schedule03Swiper.setWrapperTranslate(-40);
 
 //     }
 // });
@@ -166,7 +171,20 @@ var mainSwiper = new Swiper('#main', {
 //       }
 //      }
 //     });
-
+function setEventContentHeight(){
+  $(".slide-schedule .times").each(function(index,ele){
+    var maxEventBoxHeight=0;
+    var that = $(this);
+    that.find(".event-box").each(function(index,ele){
+      if($(this).height()>maxEventBoxHeight){
+        maxEventBoxHeight=$(this).height();
+      }
+      if(index==that.find(".event-box").length-1){
+        that.find(".event-box").height(maxEventBoxHeight+5);
+      }
+    });
+  });
+}
 var scheduleSwiper = new Swiper('#schedule', {
     direction: 'vertical',
     speed:transitionSpeed,
@@ -176,6 +194,13 @@ var scheduleSwiper = new Swiper('#schedule', {
     slidesPerView: 1,
     mousewheelControl: true,
     roundLengths : true,
+    onInit: function(swiper){
+      var spanText = ["DAY 1","DAY 2","社区专场"];
+      $(".swiper-pagination-bullet").each(function(index,ele){
+        $(this).html(spanText[index]);
+      });
+      setEventContentHeight();
+    },
     onSetTransition: function(swiper,translate){
       //父级锁定&解锁
       if(mainSwiper.activeIndex==2){
@@ -185,10 +210,10 @@ var scheduleSwiper = new Swiper('#schedule', {
         mainSwiper.params.onlyExternal=false;
         mainSwiper.enableMousewheelControl();
       }
-//    timelineSwiper.setWrapperTranslate(-10);
-      schedule01Swiper.setWrapperTranslate(-10);
-      schedule02Swiper.setWrapperTranslate(-10);
-      //schedule03Swiper.setWrapperTranslate(-10);
+//    timelineSwiper.setWrapperTranslate(-40);
+      schedule01Swiper.setWrapperTranslate(-40);
+      schedule02Swiper.setWrapperTranslate(-40);
+      schedule03Swiper.setWrapperTranslate(-40);
     }
 });
 
@@ -354,18 +379,18 @@ var transportSwiper = new Swiper('#transport', {
     roundLengths : true,
     prevButton:'.swiper-button-prev',
     nextButton:'.swiper-button-next',
-    onInit: function(swiper){
-      var spanText = ["DAY 1","DAY 2","社区专场"];
-      $(".swiper-pagination-bullet").each(function(index,ele){
-        $(this).html(spanText[index]);
-      });
-    },
     onSetTransition: function(swiper,translate){
-      if(swiper.activeIndex==1 && $("#hotel_map1").attr("src")==""){
-        $("#hotel_map1").attr("src","https://gaode.com/search?id=B001702171&city=500106&geoobj=106.577472%7C29.556369%7C106.579741%7C29.557361&query_type=IDQ&query=%E9%87%8D%E5%BA%86%E4%B8%BD%E8%8B%91%E5%A4%A7%E9%85%92%E5%BA%97&zoom=18");
+      if(swiper.activeIndex==1 && $("#hotel_map1").html()==""){
+        creatMap2();
+        //$("#hotel_map1").attr("src","https://gaode.com/search?id=B001702171&city=500106&geoobj=106.577472%7C29.556369%7C106.579741%7C29.557361&query_type=IDQ&query=%E9%87%8D%E5%BA%86%E4%B8%BD%E8%8B%91%E5%A4%A7%E9%85%92%E5%BA%97&zoom=18");
       }
-      if(swiper.activeIndex==2 && $("#hotel_map2").attr("src")==""){
-        $("#hotel_map2").attr("src","https://gaode.com/search?query=%E7%93%A6%E8%88%8D%E5%9B%BD%E9%99%85%E9%9D%92%E5%B9%B4%E6%97%85%E8%88%8D(%E9%87%8D%E5%BA%86%E8%A7%A3%E6%94%BE%E7%A2%91%E8%BE%83%E5%9C%BA%E5%8F%A3%E5%9C%B0%E9%93%81%E7%AB%99%E5%BA%97)&city=500000&geoobj=106.570113%7C29.55144%7C106.57478%7C29.5536&zoom=18");
+      if(swiper.activeIndex==2 && $("#hotel_map2").html()==""){
+        creatMap3();
+        //$("#hotel_map2").attr("src","https://gaode.com/search?query=%E7%93%A6%E8%88%8D%E5%9B%BD%E9%99%85%E9%9D%92%E5%B9%B4%E6%97%85%E8%88%8D(%E9%87%8D%E5%BA%86%E8%A7%A3%E6%94%BE%E7%A2%91%E8%BE%83%E5%9C%BA%E5%8F%A3%E5%9C%B0%E9%93%81%E7%AB%99%E5%BA%97)&city=500000&geoobj=106.570113%7C29.55144%7C106.57478%7C29.5536&zoom=18");
+      }
+      if(swiper.activeIndex==3 && $("#hotel_map3").html()==""){
+        creatMap4();
+        //$("#hotel_map3").attr("src","https://gaode.com/search?query=%E7%93%A6%E8%88%8D%E5%9B%BD%E9%99%85%E9%9D%92%E5%B9%B4%E6%97%85%E8%88%8D(%E9%87%8D%E5%BA%86%E8%A7%A3%E6%94%BE%E7%A2%91%E8%BE%83%E5%9C%BA%E5%8F%A3%E5%9C%B0%E9%93%81%E7%AB%99%E5%BA%97)&city=500000&geoobj=106.570113%7C29.55144%7C106.57478%7C29.5536&zoom=18");
       }
     }
   });

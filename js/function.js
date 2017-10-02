@@ -93,16 +93,78 @@ function closeMenu(){
 }
 
 function creatMap1(){
-  var lnglat = [116.473188,39.993253];
-  var map = new AMap.Map('cqu_map', { resizeEnable: true, center: lnglat, zoom: 15 });
+  var lnglat = [106.470594,29.56599];//重庆大学主教学楼
+  var map = new AMap.Map('cqu_map', { resizeEnable: true, center: lnglat, zoom: 17 });
   var marker = new AMap.Marker({ position: lnglat });
   marker.setMap(map);
-  var content='<div class="info-content">The Main Teaching Building, Chongqing University<br/>重庆大学主教学楼</div></div>';
+  var content='<div class="info-title">Venue</div><div class="info-content">The Main Teaching Building, Chongqing University<br/>重庆大学主教学楼</div></div>';
   var infowindow1 = new AMap.AdvancedInfoWindow({ content: content, offset: new AMap.Pixel(0, -30) });
   infowindow1.open(map,lnglat);
+  marker.on('click', function(){infowindow1.open(map,lnglat);});
   map.setLang('zh_en');
   map.plugin(["AMap.ToolBar"], function() {
     map.addControl(new AMap.ToolBar());
   });
   map.setStatus({scrollWheel:false})
+}
+function creatMap2(){
+  var lnglat = [106.4600366322,29.5559745027];//重庆丽源大酒店
+  var map = new AMap.Map('hotel_map1', { resizeEnable: true, center: lnglat, zoom: 18 });
+  var marker = new AMap.Marker({ position: lnglat });
+  marker.setMap(map);
+  var content='<div class="info-title">Hotel</div><div class="info-content">Chongqing Liyuan Hotel<br/>重庆丽苑大酒店</div></div>';
+  var infowindow1 = new AMap.AdvancedInfoWindow({ content: content, offset: new AMap.Pixel(0, -30) });
+  infowindow1.open(map,lnglat);
+  marker.on('click', function(){infowindow1.open(map,lnglat);});
+  map.setLang('zh_en');
+  map.plugin(["AMap.ToolBar"], function() {
+    map.addControl(new AMap.ToolBar());
+  });
+  map.setStatus({scrollWheel:false})
+}
+function creatMap3(){
+  var lnglat = [106.5790907123,29.5591434098];//重庆洲际酒店
+  var map = new AMap.Map('hotel_map2', { resizeEnable: true, center: lnglat, zoom: 18 });
+  var marker = new AMap.Marker({ position: lnglat });
+  marker.setMap(map);
+  var content='<div class="info-title">Hotel</div><div class="info-content">InterContinental Chongqing Hotel<br/>重庆洲际酒店</div></div>';
+  var infowindow1 = new AMap.AdvancedInfoWindow({ content: content, offset: new AMap.Pixel(0, -30) });
+  infowindow1.open(map,lnglat);
+  marker.on('click', function(){infowindow1.open(map,lnglat);});
+  map.setLang('zh_en');
+  map.plugin(["AMap.ToolBar"], function() {
+    map.addControl(new AMap.ToolBar());
+  });
+  map.setStatus({scrollWheel:false})
+}
+function creatMap4(){
+  var lnglat = [106.57125,29.552688];//重庆瓦舍国际青年旅社（解放碑店）
+  var map = new AMap.Map('hotel_map3', { resizeEnable: true, center: lnglat, zoom: 18 });
+  var marker = new AMap.Marker({ position: lnglat });
+  marker.setMap(map);
+  var content='<div class="info-title">Hostel</div><div class="info-content">Chongqing Travelling With Hostel (Jiefangbei)<br/>重庆瓦舍国际青年旅社（解放碑店）</div></div>';
+  var infowindow1 = new AMap.AdvancedInfoWindow({ content: content, offset: new AMap.Pixel(0, -30) });
+  infowindow1.open(map,lnglat);
+  marker.on('click', function(){infowindow1.open(map,lnglat);});
+  map.setLang('zh_en');
+  map.plugin(["AMap.ToolBar"], function() {
+    map.addControl(new AMap.ToolBar());
+  });
+  map.setStatus({scrollWheel:false})
+}
+function setEventContentHeight(){
+  $(".slide-schedule .times").each(function(index,ele){
+    var maxEventBoxHeight=0;
+    var that = $(this);
+    if(index=="20"){
+      console.log("20");
+    }
+    that.find(".event-box").each(function(index,ele){
+      if($(this).height()>maxEventBoxHeight){
+        maxEventBoxHeight=$(this).height();
+      }else{
+        that.find(".event-box").height(maxEventBoxHeight);
+      }
+    });
+  });
 }
